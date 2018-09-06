@@ -54,6 +54,8 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
         c = new javax.swing.JTextField();
         calcularM = new javax.swing.JButton();
         constante = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        days = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -75,7 +77,7 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
                 PseudoRandomSelectorActionPerformed(evt);
             }
         });
-        jPanel1.add(PseudoRandomSelector, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, -1, -1));
+        jPanel1.add(PseudoRandomSelector, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, -1, -1));
 
         semilla1.setName(""); // NOI18N
         semilla1.addActionListener(new java.awt.event.ActionListener() {
@@ -126,10 +128,19 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
         jPanel1.add(c, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 220, 90, -1));
 
         calcularM.setText("Calcular");
+        calcularM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcularMActionPerformed(evt);
+            }
+        });
         jPanel1.add(calcularM, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 240, -1, -1));
 
         constante.setText("Constante");
         jPanel1.add(constante, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 70, -1));
+
+        jLabel1.setText("Cantidad de días de la simulación");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 70, -1, 20));
+        jPanel1.add(days, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 70, 50, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -137,11 +148,11 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 539, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 20, Short.MAX_VALUE))
+                .addGap(0, 16, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 283, Short.MAX_VALUE)
         );
 
         pack();
@@ -274,6 +285,38 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_PseudoRandomSelectorItemStateChanged
 
+    private void calcularMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calcularMActionPerformed
+        // TODO add your handling code here:
+        switch(PseudoRandomSelector.getSelectedItem().toString().split(" - ")[0]){
+                    case "1":
+                        Integer semilla = Integer.parseInt(semilla1.getText()); //input
+                    break;
+                    case "2":
+                        Integer semillaOne = Integer.parseInt(semilla1.getText()); //input
+                        Integer semillaTwo = Integer.parseInt(semilla2.getText()); //input
+                    break;
+                    case "3":
+                        Integer semillaOneTwo = Integer.parseInt(semilla1.getText()); //input
+                        Integer constanteMultiplicativa = Integer.parseInt(semilla2.getText()); //input
+                    break;
+                    case "4":
+                        Integer semillaOneThree = Integer.parseInt(semilla1.getText()); //input
+                        Integer aConstant = Integer.parseInt(a.getText()); //input
+                        Integer mConstant = Integer.parseInt(m.getText()); //input
+                        
+                    break;
+                    case "5":
+                        Integer semillaOneFour = Integer.parseInt(semilla1.getText()); //input
+                        Integer aConstantTwo = Integer.parseInt(a.getText()); //input
+                        Integer mConstantTwo = Integer.parseInt(m.getText()); //input
+                        Integer cConstantTwo = Integer.parseInt(c.getText()); //input
+                    break;
+                    default:
+                        System.out.println("Debe seleccionar una opción");
+                    break;
+                }
+    }//GEN-LAST:event_calcularMActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -317,6 +360,8 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
     private javax.swing.JLabel c1;
     private javax.swing.JButton calcularM;
     private javax.swing.JLabel constante;
+    private static javax.swing.JTextField days;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private static javax.swing.JTextField m;

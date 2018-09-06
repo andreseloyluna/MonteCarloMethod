@@ -84,7 +84,7 @@ public class Main extends javax.swing.JFrame {
     private void MainButtonContinueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MainButtonContinueActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
-        new SeudoRandomMethod().setVisible(true);
+        new InputTables().setVisible(true);
         //new InputTables().setVisible(true);
     }//GEN-LAST:event_MainButtonContinueActionPerformed
 
