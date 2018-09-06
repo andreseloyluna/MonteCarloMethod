@@ -285,32 +285,39 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_PseudoRandomSelectorItemStateChanged
 
+    public static double[][] random;
+    
     private void calcularMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calcularMActionPerformed
-        // TODO add your handling code here:
+        Integer dias = Integer.parseInt(days.getText());
+// TODO add your handling code here:
         switch(PseudoRandomSelector.getSelectedItem().toString().split(" - ")[0]){
                     case "1":
                         Integer semilla = Integer.parseInt(semilla1.getText()); //input
+                        random = PseudoRandomNumbers.mediosCuadrados(semilla, dias);
                     break;
                     case "2":
                         Integer semillaOne = Integer.parseInt(semilla1.getText()); //input
                         Integer semillaTwo = Integer.parseInt(semilla2.getText()); //input
+                        random = PseudoRandomNumbers.productoMedio(semillaOne, semillaTwo, dias);
                     break;
                     case "3":
                         Integer semillaOneTwo = Integer.parseInt(semilla1.getText()); //input
                         Integer constanteMultiplicativa = Integer.parseInt(semilla2.getText()); //input
+                        random = PseudoRandomNumbers.productoMedioVariado(semillaOneTwo, constanteMultiplicativa, dias);
                     break;
                     case "4":
                         Integer semillaOneThree = Integer.parseInt(semilla1.getText()); //input
                         Integer aConstant = Integer.parseInt(a.getText()); //input
                         Integer mConstant = Integer.parseInt(m.getText()); //input
-                        
+                        random = PseudoRandomNumbers.congruencialMultiplicativo(semillaOneThree, aConstant, mConstant, dias);
                     break;
                     case "5":
                         Integer semillaOneFour = Integer.parseInt(semilla1.getText()); //input
                         Integer aConstantTwo = Integer.parseInt(a.getText()); //input
                         Integer mConstantTwo = Integer.parseInt(m.getText()); //input
                         Integer cConstantTwo = Integer.parseInt(c.getText()); //input
-                    break;
+                        random = PseudoRandomNumbers.congruencialMixto(semillaOneFour, aConstantTwo, cConstantTwo, mConstantTwo, dias);
+                        break;
                     default:
                         System.out.println("Debe seleccionar una opción");
                     break;
