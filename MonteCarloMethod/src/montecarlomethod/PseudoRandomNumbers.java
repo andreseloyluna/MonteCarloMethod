@@ -42,7 +42,8 @@ public class PseudoRandomNumbers {
         return matriz;
     }
     public static double[][] logicaMediosCuadrados(double[][] matriz,int i, int j){
-        if (Double.toString(matriz[i][j-1]).length() % 2 != 0){
+        if(matriz[i][j-1]> 99){
+         if (Double.toString(matriz[i][j-1]).length() % 2 != 0){
             Double x = matriz[i][j-1];
             int y = Integer.toString(x.intValue()).length()/2;
             matriz[i][j] = Double.parseDouble((Double.toString(matriz[i][j-1])).substring(y-1, y+2));
@@ -50,6 +51,9 @@ public class PseudoRandomNumbers {
             Double x = matriz[i][j-1];
             int y = Integer.toString(x.intValue()).length()/2;
             matriz[i][j] = Double.parseDouble((Double.toString(matriz[i][j-1])).substring(y-2, y+1));
+        }   
+        }else{
+            matriz[i][j] = matriz[i][j-1];
         }
     return matriz;    
     }

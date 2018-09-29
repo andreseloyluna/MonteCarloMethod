@@ -5,6 +5,8 @@
  */
 package montecarlomethod;
 
+import java.util.Arrays;
+
 
 /**
  *
@@ -317,11 +319,12 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
                         Integer mConstantTwo = Integer.parseInt(m.getText()); //input
                         Integer cConstantTwo = Integer.parseInt(c.getText()); //input
                         random = PseudoRandomNumbers.congruencialMixto(semillaOneFour, aConstantTwo, cConstantTwo, mConstantTwo, dias);
-                        break;
                     default:
                         System.out.println("Debe seleccionar una opción");
                     break;
-                }
+        }
+        
+      
     }//GEN-LAST:event_calcularMActionPerformed
 
     /**
