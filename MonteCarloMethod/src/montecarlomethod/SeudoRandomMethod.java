@@ -352,6 +352,20 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
         System.out.println("Tabla de Solucion 1:");
         System.out.println(Arrays.deepToString(tablaSolucion1));
         // Tabla de solucion 1 lista
+        int cantidadDeCamiones = 0;
+        for (int i = 0; i < dias; i++) {
+            cantidadDeCamiones += tablaSolucion1[i][2];
+        }
+        double[][] tablaSolucion2 = new double[cantidadDeCamiones][7];
+        int k = 0;
+        for (int i = 0; i < dias; i++) {
+            int cantCamionesDia = (int) tablaSolucion1[i][tablaSolucion1[i].length-1];
+            for (int j = 0; j < cantCamionesDia; j++) {
+                tablaSolucion2[k][0] = i;
+                tablaSolucion2[k][1] = j;
+                k++;
+            }
+        }
     }//GEN-LAST:event_calcularMActionPerformed
     
     public static boolean isBetween(int x, int lower, int upper) {
