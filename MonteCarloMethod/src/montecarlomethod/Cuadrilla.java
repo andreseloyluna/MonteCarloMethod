@@ -11,10 +11,10 @@ package montecarlomethod;
  */
 public class Cuadrilla {
     
-    public int horasExtraDia;
-    public int horasTrabajadasDia;
-    public int horasExtraTotales;
-    public int horasTrabajadasTotales;
+    public double horasExtraDia;
+    public double horasTrabajadasDia;
+    public double horasExtraTotales;
+    public double horasTrabajadasTotales;
     public Cuadrilla(){
        horasExtraDia = 0;
        horasTrabajadasDia = 0;

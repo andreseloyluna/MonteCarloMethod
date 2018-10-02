@@ -13,7 +13,8 @@ import java.util.Arrays;
  * @author aels21
  */
 public class SeudoRandomMethod extends javax.swing.JFrame {
-
+    static final double precioHoraNormalCuadrilla = 6600;
+    static final double precioHoraExtraCuadrilla = 9900;
     /**
      * Creates new form SeudoRandomMethod
      */
@@ -428,15 +429,15 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
             switch((int) tablaSolucion2[i][5]){
                 case 1:
                     //Tipo de carga A
-                    tablaSolucion2[i][6] = Math.round((tablaSolucion2[i][3] / 4000)*1000d)/1000d; 
+                    tablaSolucion2[i][6] = Math.round((tablaSolucion2[i][3] / 4000)*1000d)/1000d; //Duracion de la descarga
                     break;
                 case 2:
                     //Tipo de carga B
-                    tablaSolucion2[i][6] = Math.round((tablaSolucion2[i][3] / 3500)*1000d)/1000d;
+                    tablaSolucion2[i][6] = Math.round((tablaSolucion2[i][3] / 3500)*1000d)/1000d; //Duracion de la descarga
                     break;
                 case 3:
                     //Tipo de carga C
-                    tablaSolucion2[i][6] = Math.round((tablaSolucion2[i][3] / 2500)*1000d)/1000d;
+                    tablaSolucion2[i][6] = Math.round((tablaSolucion2[i][3] / 2500)*1000d)/1000d; //Duracion de la descarga
                     break;
             }
         }
@@ -452,22 +453,52 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
         
         int diaActual = (int) tablaSolucion2[0][0];
         int i = 0;
-        while(i<cantidadDeCamiones){
+        Cuadrilla cuadrillaA = new Cuadrilla();
+        Cuadrilla cuadrillaB = new Cuadrilla();
+        Cuadrilla cuadrillaC = new Cuadrilla();
+        while((i<cantidadDeCamiones) && (diaActual != dias-1)){ //Todos los dias se procesan, excepto el ultimo, pues los camiones de ese dia no entraran en la simulacion
+            Cuadrilla cuadrillaActual = menosTiempo(cuadrillaA,cuadrillaB,cuadrillaC); //Se selecciona qué cuadrilla ocupará éste camion, analizando quién tiene menos tiempo
             if((int)(tablaSolucion2[i][0]) == diaActual){
-              //Asignar cudrillas  
-                
+              //Asignar cudrillas
+              cuadrillaActual.horasTrabajadasDia += tablaSolucion2[i][6];
+              boolean hayExtras = cuadrillaActual.horasTrabajadasDia > 8;
+              if(!hayExtras){
+                  //La cuadrilla no ha trabajado ninguna hora extra con ése camión.
+                  tablaSolucion2[i][7] = Math.round((tablaSolucion2[i][6] * precioHoraNormalCuadrilla)*1000d)/1000d;;
+              }else{
+                  double horasAnteriores = cuadrillaActual.horasTrabajadasDia - tablaSolucion2[i][6];
+                  boolean parteNormal = horasAnteriores < 8;
+                  if(parteNormal){
+                      //La cuadrilla trabajó el resto de 8 horas más unas extras con éste camión.
+                      double horasNormales = 8 - horasAnteriores;
+                      double horasExtras = tablaSolucion2[i][6] - horasNormales;
+                      tablaSolucion2[i][7] = Math.round((horasNormales * precioHoraNormalCuadrilla + horasExtras * precioHoraExtraCuadrilla)*1000d)/1000d;
+                      cuadrillaActual.horasExtraDia += horasExtras;
+                  }else{
+                      //La cuadrilla trabajó solamente horas extras con éste camión.
+                      tablaSolucion2[i][7] = Math.round((tablaSolucion2[i][6] * precioHoraExtraCuadrilla)*1000d)/1000d;
+                      cuadrillaActual.horasExtraDia += tablaSolucion2[i][6];
+                  }
+              }
               i++;
             }else{
                 diaActual = (int)(tablaSolucion2[i][0]);
                 //Sacar cuentas del dia
+                cuadrillaActual.horasTrabajadasTotales += cuadrillaActual.horasTrabajadasDia;
+                cuadrillaActual.horasExtraTotales += cuadrillaActual.horasExtraDia;
             }
         }
-        
+        System.out.println("Tabla de Solucion 2:");
+        System.out.println(Arrays.deepToString(tablaSolucion2));
     }//GEN-LAST:event_calcularMActionPerformed
     
     public Cuadrilla menosTiempo(Cuadrilla a, Cuadrilla b, Cuadrilla c){
-        
-        return a;
+        if((a.horasTrabajadasDia <= b.horasTrabajadasDia) && (a.horasTrabajadasDia <= c.horasTrabajadasDia)){
+           return a;
+        } else if((b.horasTrabajadasDia <= a.horasTrabajadasDia) && (b.horasTrabajadasDia <= c.horasTrabajadasDia)){
+           return b;
+        }
+        return c;
     }
     
     public static boolean isBetween(int x, int lower, int upper) {
