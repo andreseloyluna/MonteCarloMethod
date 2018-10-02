@@ -13,7 +13,7 @@ import static java.lang.Math.round;
  */
 public class PseudoRandomNumbers {
     public static double[][] mediosCuadrados(double seed, int n){
-        int row = n+(2*(7*n));
+        int row = n+(2*(7*n)); //(7*n) Para cubrir el caso de mayor cantidad de camiones posible (n veces 7 camiones). (*2) porque por cada camion se necesitan 2 numeros seudo aleatorios. (+n) porque cada dia de la simulacion necesita un numero seudo aleatorio.
         int col = 5;
         double [][] matriz = new double[row][col];
         for (int i = 0; i < row; i++) {

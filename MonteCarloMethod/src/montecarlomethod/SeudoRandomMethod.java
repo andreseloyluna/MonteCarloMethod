@@ -324,7 +324,10 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
                     break;
                         
         }
-        
+        /*
+        * Calculo de la primera tabla de solucion
+        * [ Dia | Rn | Camion ]
+        */
         double[][] tablaSolucion1 = new double[dias][3];
         while(contadorSeudoAleatorio < dias){
             tablaSolucion1[contadorSeudoAleatorio][0] = contadorSeudoAleatorio;
@@ -352,20 +355,31 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
         System.out.println("Tabla de Solucion 1:");
         System.out.println(Arrays.deepToString(tablaSolucion1));
         // Tabla de solucion 1 lista
+        
+        /*
+        * Suma de la cantidad total de camiones
+        */
         int cantidadDeCamiones = 0;
         for (int i = 0; i < dias; i++) {
-            cantidadDeCamiones += tablaSolucion1[i][2];
+            cantidadDeCamiones += tablaSolucion1[i][2]; // Se suma la ultima columna pues es la que tiene el numero de camiones cada dia
         }
-        System.out.println(cantidadDeCamiones);
+        
+        /*
+        * Calculo de la segunda tabla de solucion (Primer recorrido)
+        * [ Dia | Camion | Rn | Kilogramos | Rn | TipoCarga | DuracionDescarga ]
+        * ( En este recorrido se realiza el primer despliegue de Rn para la cantidad de kilogramos de carga )
+        */
         double[][] tablaSolucion2 = new double[cantidadDeCamiones][7];
         int k = 0;
         for (int i = 0; i < dias; i++) {
+            //Para cada uno de los dias, reviso cuantos camiones llegan
             int cantCamionesDia = (int) tablaSolucion1[i][tablaSolucion1[i].length-1];
                 for (int j = 0; j < cantCamionesDia; j++) {
+                    // Y por cada camion que llega, se guarda un registro en la tabla.
                     tablaSolucion2[k][0] = i; //Dia
                     tablaSolucion2[k][1] = j; //Camion del dia
-                    tablaSolucion2[k][2] = random[contadorSeudoAleatorio][random[contadorSeudoAleatorio].length-1]; //Rn para KG de carga
-                    int seudoRandomNumber = (int) (tablaSolucion2[k][2]*1000); 
+                    tablaSolucion2[k][2] = random[contadorSeudoAleatorio][random[contadorSeudoAleatorio].length-1]; //Rn para kilogramos de carga
+                    int seudoRandomNumber = (int) (tablaSolucion2[k][2]*1000);
                     if (isBetween(seudoRandomNumber,0,79)){ //Calculo de la cantidad de carga
                         tablaSolucion2[k][3] = 5000; //Kilogramos de carga
                     }else if(isBetween(seudoRandomNumber,80,189)){
@@ -385,16 +399,22 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
                     k++;
                 }
         }
+        /*
+        * Calculo de la segunda tabla de solucion (Segundo recorrido)
+        * [ Dia | Camion | Rn | Kilogramos | Rn | TipoCarga | DuracionDescarga ]
+        * ( En este recorrido se realiza el segundo despliegue de Rn para el tipo carga )
+        */
         for (int i = 0; i < cantidadDeCamiones; i++) {
-            tablaSolucion2[k][4] = random[contadorSeudoAleatorio][random[contadorSeudoAleatorio].length-1]; //Rn para Tipo de carga
-            int seudoRandomNumber = (int) (tablaSolucion2[k][2]*1000);
-            if (isBetween(seudoRandomNumber,0,79)){ //Calculo de la cantidad de carga
-                tablaSolucion2[k][5] = 1; //Tipo de carga A
-            }else if(isBetween(seudoRandomNumber,80,189)){
-                tablaSolucion2[k][5] = 2; //Tipo de carga B
-            }else if(isBetween(seudoRandomNumber,190,339)){
-                tablaSolucion2[k][5] = 3; //Tipo de carga Aa
+            tablaSolucion2[i][4] = random[contadorSeudoAleatorio][random[contadorSeudoAleatorio].length-1]; //Rn para Tipo de carga
+            int seudoRandomNumber = (int) (tablaSolucion2[i][4]*1000);
+            if (isBetween(seudoRandomNumber,0,399)){ //Calculo de la cantidad de carga
+                tablaSolucion2[i][5] = 1; //Tipo de carga A
+            }else if(isBetween(seudoRandomNumber,400,749)){
+                tablaSolucion2[i][5] = 2; //Tipo de carga B
+            }else if(isBetween(seudoRandomNumber,750,999)){
+                tablaSolucion2[i][5] = 3; //Tipo de carga C
             }
+            contadorSeudoAleatorio++;
         }
         System.out.println("Tabla de Solucion 2:");
         System.out.println(Arrays.deepToString(tablaSolucion2));
