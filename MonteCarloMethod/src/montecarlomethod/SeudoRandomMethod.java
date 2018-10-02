@@ -331,21 +331,21 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
             tablaSolucion1[contadorSeudoAleatorio][1] = random[contadorSeudoAleatorio][random[contadorSeudoAleatorio].length-1];
             int seudoRandomNumber = (int) (tablaSolucion1[contadorSeudoAleatorio][1]*1000);
             if (isBetween(seudoRandomNumber,0,49)){
-                tablaSolucion1[contadorSeudoAleatorio][2] = 0;
+                tablaSolucion1[contadorSeudoAleatorio][2] = 0; //Camiones en el dia
             }else if(isBetween(seudoRandomNumber,50,199)){
-                tablaSolucion1[contadorSeudoAleatorio][2] = 1;
+                tablaSolucion1[contadorSeudoAleatorio][2] = 1; //Camiones en el dia
             }else if(isBetween(seudoRandomNumber,200,419)){
-                tablaSolucion1[contadorSeudoAleatorio][2] = 2;
+                tablaSolucion1[contadorSeudoAleatorio][2] = 2; //Camiones en el dia
             }else if(isBetween(seudoRandomNumber,420,639)){
-                tablaSolucion1[contadorSeudoAleatorio][2] = 3;
+                tablaSolucion1[contadorSeudoAleatorio][2] = 3; //Camiones en el dia
             }else if(isBetween(seudoRandomNumber,640,809)){
-                tablaSolucion1[contadorSeudoAleatorio][2] = 4;
+                tablaSolucion1[contadorSeudoAleatorio][2] = 4; //Camiones en el dia
             }else if(isBetween(seudoRandomNumber,810,919)){
-                tablaSolucion1[contadorSeudoAleatorio][2] = 5;
+                tablaSolucion1[contadorSeudoAleatorio][2] = 5; //Camiones en el dia
             }else if(isBetween(seudoRandomNumber,920,969)){
-                tablaSolucion1[contadorSeudoAleatorio][2] = 6;
+                tablaSolucion1[contadorSeudoAleatorio][2] = 6; //Camiones en el dia
             }else if(isBetween(seudoRandomNumber,970,999)){
-                tablaSolucion1[contadorSeudoAleatorio][2] = 7;
+                tablaSolucion1[contadorSeudoAleatorio][2] = 7; //Camiones en el dia
             }
             contadorSeudoAleatorio++;
         }
@@ -362,20 +362,48 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
         for (int i = 0; i < dias; i++) {
             int cantCamionesDia = (int) tablaSolucion1[i][tablaSolucion1[i].length-1];
                 for (int j = 0; j < cantCamionesDia; j++) {
-                    tablaSolucion2[k][0] = i;
-                    tablaSolucion2[k][1] = j;
+                    tablaSolucion2[k][0] = i; //Dia
+                    tablaSolucion2[k][1] = j; //Camion del dia
+                    tablaSolucion2[k][2] = random[contadorSeudoAleatorio][random[contadorSeudoAleatorio].length-1]; //Rn para KG de carga
+                    int seudoRandomNumber = (int) (tablaSolucion2[k][2]*1000); 
+                    if (isBetween(seudoRandomNumber,0,79)){ //Calculo de la cantidad de carga
+                        tablaSolucion2[k][3] = 5000; //Kilogramos de carga
+                    }else if(isBetween(seudoRandomNumber,80,189)){
+                        tablaSolucion2[k][3] = 10000; //Kilogramos de carga
+                    }else if(isBetween(seudoRandomNumber,190,339)){
+                        tablaSolucion2[k][3] = 15000; //Kilogramos de carga
+                    }else if(isBetween(seudoRandomNumber,340,569)){
+                        tablaSolucion2[k][3] = 20000; //Kilogramos de carga
+                    }else if(isBetween(seudoRandomNumber,570,769)){
+                        tablaSolucion2[k][3] = 25000; //Kilogramos de carga
+                    }else if(isBetween(seudoRandomNumber,770,889)){
+                        tablaSolucion2[k][3] = 30000; //Kilogramos de carga
+                    }else if(isBetween(seudoRandomNumber,900,999)){
+                        tablaSolucion2[k][3] = 35000; //Kilogramos de carga
+                    }
+                    contadorSeudoAleatorio++;
                     k++;
                 }
-            
+        }
+        for (int i = 0; i < cantidadDeCamiones; i++) {
+            tablaSolucion2[k][4] = random[contadorSeudoAleatorio][random[contadorSeudoAleatorio].length-1]; //Rn para Tipo de carga
+            int seudoRandomNumber = (int) (tablaSolucion2[k][2]*1000);
+            if (isBetween(seudoRandomNumber,0,79)){ //Calculo de la cantidad de carga
+                tablaSolucion2[k][5] = 1; //Tipo de carga A
+            }else if(isBetween(seudoRandomNumber,80,189)){
+                tablaSolucion2[k][5] = 2; //Tipo de carga B
+            }else if(isBetween(seudoRandomNumber,190,339)){
+                tablaSolucion2[k][5] = 3; //Tipo de carga Aa
+            }
         }
         System.out.println("Tabla de Solucion 2:");
         System.out.println(Arrays.deepToString(tablaSolucion2));
-        // Tabla de solucion 1 lista
+        // Tabla de solucion 2 lista
     }//GEN-LAST:event_calcularMActionPerformed
     
     public static boolean isBetween(int x, int lower, int upper) {
         return lower <= x && x <= upper;
-    }
+    } 
     /**
      * @param args the command line arguments
      */
