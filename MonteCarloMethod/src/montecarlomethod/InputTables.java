@@ -70,6 +70,7 @@ public class InputTables extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        jTable1.setAutoscrolls(false);
         jScrollPane1.setViewportView(jTable1);
 
         jTable2.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
@@ -91,6 +92,7 @@ public class InputTables extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        jTable2.setAutoscrolls(false);
         jScrollPane2.setViewportView(jTable2);
 
         jTable3.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
@@ -116,6 +118,7 @@ public class InputTables extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        jTable3.setAutoscrolls(false);
         jScrollPane3.setViewportView(jTable3);
 
         jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
@@ -130,8 +133,10 @@ public class InputTables extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel4.setText("Tablas de Entrada de Datos");
 
+        jButton1.setBackground(new java.awt.Color(196, 220, 245));
         jButton1.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
         jButton1.setText("Continuar");
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -166,12 +171,14 @@ public class InputTables extends javax.swing.JFrame {
                         .addGap(99, 99, 99))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InputTablesPanelLayout.createSequentialGroup()
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(176, 176, 176))))
+                        .addGap(182, 182, 182))))
         );
         InputTablesPanelLayout.setVerticalGroup(
             InputTablesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(InputTablesPanelLayout.createSequentialGroup()
-                .addGap(39, 39, 39)
+                .addGap(41, 41, 41)
+                .addComponent(jLabel4)
+                .addGap(35, 35, 35)
                 .addGroup(InputTablesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(InputTablesPanelLayout.createSequentialGroup()
                         .addComponent(jLabel1)
@@ -181,15 +188,13 @@ public class InputTables extends javax.swing.JFrame {
                         .addComponent(jLabel3)
                         .addGap(21, 21, 21))
                     .addGroup(InputTablesPanelLayout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addGap(37, 37, 37)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(43, 43, 43)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(43, 43, 43)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(42, 42, 42)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(66, 66, 66)
-                .addComponent(jButton1)
+                .addGap(54, 54, 54)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(53, Short.MAX_VALUE))
         );
 
