@@ -42,18 +42,20 @@ public class Main extends javax.swing.JFrame {
 
         MainPanel.setBackground(new java.awt.Color(255, 255, 255));
         MainPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        MainPanel.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
         MainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         MainButtonContinue.setBackground(new java.awt.Color(196, 220, 245));
         MainButtonContinue.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
         MainButtonContinue.setText("Continuar");
         MainButtonContinue.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MainButtonContinue.setPreferredSize(new java.awt.Dimension(79, 23));
         MainButtonContinue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MainButtonContinueActionPerformed(evt);
             }
         });
-        MainPanel.add(MainButtonContinue, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 310, 90, 30));
+        MainPanel.add(MainButtonContinue, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 310, 100, 40));
 
         jLabel1.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
         jLabel1.setText("SIMULACIÓN Y MODELOS");

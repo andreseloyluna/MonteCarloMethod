@@ -138,6 +138,8 @@ public class InputTables extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
         jButton1.setText("Continuar");
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.setMaximumSize(new java.awt.Dimension(87, 23));
+        jButton1.setMinimumSize(new java.awt.Dimension(87, 23));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -148,10 +150,6 @@ public class InputTables extends javax.swing.JFrame {
         InputTablesPanel.setLayout(InputTablesPanelLayout);
         InputTablesPanelLayout.setHorizontalGroup(
             InputTablesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InputTablesPanelLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(51, 51, 51))
             .addGroup(InputTablesPanelLayout.createSequentialGroup()
                 .addGap(59, 59, 59)
                 .addGroup(InputTablesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -172,7 +170,10 @@ public class InputTables extends javax.swing.JFrame {
                         .addGap(99, 99, 99))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InputTablesPanelLayout.createSequentialGroup()
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(182, 182, 182))))
+                        .addGap(182, 182, 182))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InputTablesPanelLayout.createSequentialGroup()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(51, 51, 51))))
         );
         InputTablesPanelLayout.setVerticalGroup(
             InputTablesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
