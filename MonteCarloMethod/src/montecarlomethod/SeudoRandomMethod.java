@@ -286,7 +286,7 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
             
         }
     }//GEN-LAST:event_PseudoRandomSelectorItemStateChanged
-
+    public int contadorSeudoAleatorio = 0;
     public static double[][] random;
     
     private void calcularMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calcularMActionPerformed
@@ -322,11 +322,38 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
                     default:
                         System.out.println("Debe seleccionar una opción");
                     break;
+                        
         }
         
-      
+        double[][] tablaSolucion1 = new double[dias][3];
+        while(contadorSeudoAleatorio < dias){
+            tablaSolucion1[contadorSeudoAleatorio][0] = contadorSeudoAleatorio;
+            tablaSolucion1[contadorSeudoAleatorio][1] = random[contadorSeudoAleatorio][random[contadorSeudoAleatorio].length-1];
+            int seudoRandomNumber = (int) (tablaSolucion1[contadorSeudoAleatorio][1]*1000);
+            if (isBetween(seudoRandomNumber,0,49)){
+                tablaSolucion1[contadorSeudoAleatorio][2] = 0;
+            }else if(isBetween(seudoRandomNumber,50,199)){
+                tablaSolucion1[contadorSeudoAleatorio][2] = 1;
+            }else if(isBetween(seudoRandomNumber,200,419)){
+                tablaSolucion1[contadorSeudoAleatorio][2] = 2;
+            }else if(isBetween(seudoRandomNumber,420,639)){
+                tablaSolucion1[contadorSeudoAleatorio][2] = 3;
+            }else if(isBetween(seudoRandomNumber,640,809)){
+                tablaSolucion1[contadorSeudoAleatorio][2] = 4;
+            }else if(isBetween(seudoRandomNumber,810,919)){
+                tablaSolucion1[contadorSeudoAleatorio][2] = 5;
+            }else if(isBetween(seudoRandomNumber,920,969)){
+                tablaSolucion1[contadorSeudoAleatorio][2] = 6;
+            }else if(isBetween(seudoRandomNumber,970,999)){
+                tablaSolucion1[contadorSeudoAleatorio][2] = 7;
+            }
+        }
+        System.out.println(Arrays.deepToString(tablaSolucion1));
     }//GEN-LAST:event_calcularMActionPerformed
-
+    
+    public static boolean isBetween(int x, int lower, int upper) {
+        return lower <= x && x <= upper;
+    }
     /**
      * @param args the command line arguments
      */
