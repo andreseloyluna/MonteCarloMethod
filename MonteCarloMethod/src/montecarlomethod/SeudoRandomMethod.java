@@ -287,6 +287,9 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_PseudoRandomSelectorItemStateChanged
     public int contadorSeudoAleatorio = 0;
+    public static int cantCargaA = 0;
+    public static int cantCargaB = 0;
+    public static int cantCargaC = 0;
     public static double[][] random;
     
     private void calcularMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calcularMActionPerformed
@@ -366,10 +369,10 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
         
         /*
         * Calculo de la segunda tabla de solucion (Primer recorrido)
-        * [ Dia | Camion | Rn | Kilogramos | Rn | TipoCarga | DuracionDescarga ]
+        * [ Dia | Camion | Rn | Kilogramos | Rn | TipoCarga | DuracionDescarga | CostoDescarga ]
         * ( En este recorrido se realiza el primer despliegue de Rn para la cantidad de kilogramos de carga )
         */
-        double[][] tablaSolucion2 = new double[cantidadDeCamiones][7];
+        double[][] tablaSolucion2 = new double[cantidadDeCamiones][8];
         int k = 0;
         for (int i = 0; i < dias; i++) {
             //Para cada uno de los dias, reviso cuantos camiones llegan
@@ -409,17 +412,63 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
             int seudoRandomNumber = (int) (tablaSolucion2[i][4]*1000);
             if (isBetween(seudoRandomNumber,0,399)){ //Calculo de la cantidad de carga
                 tablaSolucion2[i][5] = 1; //Tipo de carga A
+                cantCargaA++; //Se incrementa el contador de camiones con tipo de carga A
             }else if(isBetween(seudoRandomNumber,400,749)){
                 tablaSolucion2[i][5] = 2; //Tipo de carga B
+                cantCargaB++; //Se incrementa el contador de camiones con tipo de carga B
             }else if(isBetween(seudoRandomNumber,750,999)){
                 tablaSolucion2[i][5] = 3; //Tipo de carga C
+                cantCargaC++; //Se incrementa el contador de camiones con tipo de carga C
             }
             contadorSeudoAleatorio++;
+            /*
+            * Ahora se procede a calcular la ultima columna, la cual nos ayuda a saber la duracion
+            * de descarga de cada camion en funcion del tipo de carga (A=1, B=2, C=3).
+            */
+            switch((int) tablaSolucion2[i][5]){
+                case 1:
+                    //Tipo de carga A
+                    tablaSolucion2[i][6] = Math.round((tablaSolucion2[i][3] / 4000)*1000d)/1000d; 
+                    break;
+                case 2:
+                    //Tipo de carga B
+                    tablaSolucion2[i][6] = Math.round((tablaSolucion2[i][3] / 3500)*1000d)/1000d;
+                    break;
+                case 3:
+                    //Tipo de carga C
+                    tablaSolucion2[i][6] = Math.round((tablaSolucion2[i][3] / 2500)*1000d)/1000d;
+                    break;
+            }
         }
         System.out.println("Tabla de Solucion 2:");
         System.out.println(Arrays.deepToString(tablaSolucion2));
         // Tabla de solucion 2 lista
+        
+        /*
+        * (Listo) Requerimiento 1: Cantidad de camiones por tipo de carga (Almacenado en las variables cantCargaA, cantCargaB, cantCargaC)
+        * (Pendiente) Requerimiento 2: Horas extras totales trabajadas por las cuadrillas (Especificar por cuadrilla y luego totalizar)
+        * (Pendiente) Requerimiento 3: Costo generado por pago a cuadrillas (Especificar Horas normales y horas extras)
+        */
+        
+        int diaActual = (int) tablaSolucion2[0][0];
+        int i = 0;
+        while(i<cantidadDeCamiones){
+            if((int)(tablaSolucion2[i][0]) == diaActual){
+              //Asignar cudrillas  
+                
+              i++;
+            }else{
+                diaActual = (int)(tablaSolucion2[i][0]);
+                //Sacar cuentas del dia
+            }
+        }
+        
     }//GEN-LAST:event_calcularMActionPerformed
+    
+    public Cuadrilla menosTiempo(Cuadrilla a, Cuadrilla b, Cuadrilla c){
+        
+        return a;
+    }
     
     public static boolean isBetween(int x, int lower, int upper) {
         return lower <= x && x <= upper;
