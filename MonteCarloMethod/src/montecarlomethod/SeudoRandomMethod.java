@@ -347,8 +347,11 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
             }else if(isBetween(seudoRandomNumber,970,999)){
                 tablaSolucion1[contadorSeudoAleatorio][2] = 7;
             }
+            contadorSeudoAleatorio++;
         }
+        System.out.println("Tabla de Solucion 1:");
         System.out.println(Arrays.deepToString(tablaSolucion1));
+        // Tabla de solucion 1 lista
     }//GEN-LAST:event_calcularMActionPerformed
     
     public static boolean isBetween(int x, int lower, int upper) {
