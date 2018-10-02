@@ -456,9 +456,10 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
         Cuadrilla cuadrillaA = new Cuadrilla();
         Cuadrilla cuadrillaB = new Cuadrilla();
         Cuadrilla cuadrillaC = new Cuadrilla();
+        Cuadrilla cuadrillaActual = cuadrillaA; //Se selecciona qué cuadrilla ocupará éste camion, analizando quién tiene menos tiempo
         while((i<cantidadDeCamiones) && (diaActual != dias-1)){ //Todos los dias se procesan, excepto el ultimo, pues los camiones de ese dia no entraran en la simulacion
-            Cuadrilla cuadrillaActual = menosTiempo(cuadrillaA,cuadrillaB,cuadrillaC); //Se selecciona qué cuadrilla ocupará éste camion, analizando quién tiene menos tiempo
             if((int)(tablaSolucion2[i][0]) == diaActual){
+              cuadrillaActual = menosTiempo(cuadrillaA,cuadrillaB,cuadrillaC); //Se selecciona qué cuadrilla ocupará éste camion, analizando quién tiene menos tiempo  
               //Asignar cudrillas
               cuadrillaActual.horasTrabajadasDia += tablaSolucion2[i][6];
               boolean hayExtras = cuadrillaActual.horasTrabajadasDia > 8;
@@ -481,11 +482,18 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
                   }
               }
               i++;
+              cuadrillaActual.horasTrabajadasTotales += cuadrillaActual.horasTrabajadasDia;
+              cuadrillaActual.horasExtraTotales += cuadrillaActual.horasExtraDia;
             }else{
                 diaActual = (int)(tablaSolucion2[i][0]);
                 //Sacar cuentas del dia
-                cuadrillaActual.horasTrabajadasTotales += cuadrillaActual.horasTrabajadasDia;
-                cuadrillaActual.horasExtraTotales += cuadrillaActual.horasExtraDia;
+                cuadrillaA.horasExtraDia = 0;
+                cuadrillaA.horasTrabajadasDia = 0;
+                cuadrillaB.horasExtraDia = 0;
+                cuadrillaB.horasTrabajadasDia = 0;
+                cuadrillaC.horasExtraDia = 0;
+                cuadrillaC.horasTrabajadasDia = 0;
+                cuadrillaActual = cuadrillaA; //Se selecciona qué cuadrilla ocupará éste camion, analizando quién tiene menos tiempo
             }
         }
         System.out.println("Tabla de Solucion 2:");
