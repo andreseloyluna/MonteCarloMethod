@@ -149,9 +149,7 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 539, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 16, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 555, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -558,12 +556,12 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
     private static javax.swing.JTextField days;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JPanel jPanel1;
+    private static javax.swing.JPanel jPanel1;
     private static javax.swing.JTextField m;
     private javax.swing.JLabel m1;
     private javax.swing.JLabel sem1;
     private javax.swing.JLabel sem2;
-    private javax.swing.JTextField semilla1;
+    private static javax.swing.JTextField semilla1;
     private static javax.swing.JTextField semilla2;
     // End of variables declaration//GEN-END:variables
 }
