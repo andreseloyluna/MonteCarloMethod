@@ -80,7 +80,7 @@ public class Salida1 extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(JtablaSolucion1);
 
-        MainPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, -1, 150));
+        MainPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, -1, 230));
 
         jButton1.setText("Salida 2");
         jButton1.addActionListener(new java.awt.event.ActionListener() {

@@ -20,20 +20,28 @@ public class Salida2 extends javax.swing.JFrame {
       initComponents();
       setLocationRelativeTo(null);
       
-      String[] headerTablaSolucion1 = {"Dia","Rn","Nro de Camiones"};
-      DefaultTableModel modelTablaSolucion1 = new DefaultTableModel(null, headerTablaSolucion1);
+      String[] headerTablaSolucion2 = {"Nro","Dia","Camion del Dia","Rn","Kilogramos","Rn","Tipo de carga","Duracion","Costo de descarga"};
+      DefaultTableModel modelTablaSolucion2 = new DefaultTableModel(null, headerTablaSolucion2);
         
         
-      for (int i = 0; i < SeudoRandomMethod.diasStatic; i++) {
-          String[] fila = new String[3];
-          fila[0] = String.valueOf(i + 1) ;
-          fila[1] = String.valueOf(SeudoRandomMethod.tablaSolucion1Static[i][1]);
-          fila[2] = String.valueOf(SeudoRandomMethod.tablaSolucion1Static[i][2]);
-          modelTablaSolucion1.addRow(fila);
+      for (int i = 0; i < SeudoRandomMethod.cantidadDeCamionesStatic; i++) {
+          String[] fila = new String[9];
+          fila[0] = String.valueOf(i + 1);
+          fila[1] = String.valueOf(SeudoRandomMethod.tablaSolucion2Static[i][0] + 1);
+          fila[2] = String.valueOf(SeudoRandomMethod.tablaSolucion2Static[i][1] + 1);
+          fila[3] = String.valueOf(SeudoRandomMethod.tablaSolucion2Static[i][2]);
+          fila[4] = String.valueOf(SeudoRandomMethod.tablaSolucion2Static[i][3]);
+          fila[5] = String.valueOf(SeudoRandomMethod.tablaSolucion2Static[i][4]);
+          int tipoCarga = (int)SeudoRandomMethod.tablaSolucion2Static[i][5];
+          fila[6] = tipoCarga == 1 ? "A" :(tipoCarga == 2 ? "B" : "C");
+          fila[7] = String.valueOf(SeudoRandomMethod.tablaSolucion2Static[i][6]);
+          fila[8] = String.valueOf(SeudoRandomMethod.tablaSolucion2Static[i][7]);
+          
+          modelTablaSolucion2.addRow(fila);
       }
         
 
-      JtablaSolucion1.setModel(modelTablaSolucion1);
+      JtablaSolucion2.setModel(modelTablaSolucion2);
       
       System.out.println("Cantidad carga A: ");
       System.out.println(SeudoRandomMethod.cantCargaA);
@@ -55,7 +63,7 @@ public class Salida2 extends javax.swing.JFrame {
 
         MainPanel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        JtablaSolucion1 = new javax.swing.JTable();
+        JtablaSolucion2 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("The MonteCarlo Project");
@@ -66,7 +74,7 @@ public class Salida2 extends javax.swing.JFrame {
         MainPanel.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
         MainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        JtablaSolucion1.setModel(new javax.swing.table.DefaultTableModel(
+        JtablaSolucion2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -77,15 +85,15 @@ public class Salida2 extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(JtablaSolucion1);
+        jScrollPane1.setViewportView(JtablaSolucion2);
 
-        MainPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, -1, 150));
+        MainPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 730, 250));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 606, Short.MAX_VALUE)
+            .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 786, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -139,7 +147,7 @@ public class Salida2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable JtablaSolucion1;
+    private javax.swing.JTable JtablaSolucion2;
     private javax.swing.JPanel MainPanel;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
