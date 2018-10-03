@@ -49,7 +49,12 @@ public class InputTables extends javax.swing.JFrame {
         InputTablesPanel.setBackground(new java.awt.Color(146, 213, 220));
         InputTablesPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jTable1.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
+        jTable1 = new javax.swing.JTable(){
+            public boolean isCellEditable(int roeIndex,int colIndex){
+                return false;
+            }
+        };
+        jTable1.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"0", "0.050", "0.050 ", "000 - 049"},
@@ -74,11 +79,18 @@ public class InputTables extends javax.swing.JFrame {
             }
         });
         jTable1.setAutoscrolls(false);
+        jTable1.setFocusable(false);
         jTable1.setInheritsPopupMenu(true);
         jTable1.setSelectionBackground(new java.awt.Color(217, 235, 249));
+        jTable1.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(jTable1);
 
-        jTable2.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
+        jTable2 = new javax.swing.JTable(){
+            public boolean isCellEditable(int roeIndex,int colIndex){
+                return false;
+            }
+        };
+        jTable2.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"A", "0.400", "4000", "0.400", "000 - 399"},
@@ -98,9 +110,16 @@ public class InputTables extends javax.swing.JFrame {
             }
         });
         jTable2.setAutoscrolls(false);
+        jTable2.setFocusable(false);
+        jTable2.getTableHeader().setReorderingAllowed(false);
         jScrollPane2.setViewportView(jTable2);
 
-        jTable3.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
+        jTable3 = new javax.swing.JTable(){
+            public boolean isCellEditable(int roeIndex,int colIndex){
+                return false;
+            }
+        };
+        jTable3.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"5000", "0.080", "0.080", "000 - 079"},
@@ -124,6 +143,8 @@ public class InputTables extends javax.swing.JFrame {
             }
         });
         jTable3.setAutoscrolls(false);
+        jTable3.setFocusable(false);
+        jTable3.getTableHeader().setReorderingAllowed(false);
         jScrollPane3.setViewportView(jTable3);
 
         jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
@@ -139,7 +160,7 @@ public class InputTables extends javax.swing.JFrame {
         jLabel4.setText("Tablas de Entrada de Datos");
 
         jButton1.setBackground(new java.awt.Color(196, 220, 245));
-        jButton1.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         jButton1.setText("Continuar");
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.setMaximumSize(new java.awt.Dimension(87, 23));

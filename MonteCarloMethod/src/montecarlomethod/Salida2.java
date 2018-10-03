@@ -20,28 +20,37 @@ public class Salida2 extends javax.swing.JFrame {
       initComponents();
       setLocationRelativeTo(null);
       
-      String[] headerTablaSolucion1 = {"Dia","Rn","Nro de Camiones"};
-      DefaultTableModel modelTablaSolucion1 = new DefaultTableModel(null, headerTablaSolucion1);
+      String[] headerTablaSolucion2 = {"Nro","Dia","Camion del Dia","Rn","Kilogramos","Rn","Tipo de carga","Duracion","Costo de descarga"};
+      DefaultTableModel modelTablaSolucion2 = new DefaultTableModel(null, headerTablaSolucion2);
         
         
-      for (int i = 0; i < SeudoRandomMethod.diasStatic; i++) {
-          String[] fila = new String[3];
-          fila[0] = String.valueOf(i + 1) ;
-          fila[1] = String.valueOf(SeudoRandomMethod.tablaSolucion1Static[i][1]);
-          fila[2] = String.valueOf(SeudoRandomMethod.tablaSolucion1Static[i][2]);
-          modelTablaSolucion1.addRow(fila);
+      for (int i = 0; i < SeudoRandomMethod.cantidadDeCamionesStatic; i++) {
+          String[] fila = new String[9];
+          fila[0] = String.valueOf(i + 1);
+          fila[1] = String.valueOf(SeudoRandomMethod.tablaSolucion2Static[i][0] + 1);
+          fila[2] = String.valueOf(SeudoRandomMethod.tablaSolucion2Static[i][1] + 1);
+          fila[3] = String.valueOf(SeudoRandomMethod.tablaSolucion2Static[i][2]);
+          fila[4] = String.valueOf(SeudoRandomMethod.tablaSolucion2Static[i][3]);
+          fila[5] = String.valueOf(SeudoRandomMethod.tablaSolucion2Static[i][4]);
+          int tipoCarga = (int)SeudoRandomMethod.tablaSolucion2Static[i][5];
+          fila[6] = tipoCarga == 1 ? "A" :(tipoCarga == 2 ? "B" : "C");
+          fila[7] = String.valueOf(SeudoRandomMethod.tablaSolucion2Static[i][6]);
+          fila[8] = String.valueOf(SeudoRandomMethod.tablaSolucion2Static[i][7]);
+          
+          modelTablaSolucion2.addRow(fila);
       }
         
 
-      JtablaSolucion1.setModel(modelTablaSolucion1);
+      JtablaSolucion2.setModel(modelTablaSolucion2);
       
-      System.out.println("Cantidad carga A: ");
-      System.out.println(SeudoRandomMethod.cantCargaA);
-      System.out.println("Cantidad carga B: ");
-      System.out.println(SeudoRandomMethod.cantCargaB);
-      System.out.println("Cantidad carga C: ");
-      System.out.println(SeudoRandomMethod.cantCargaC);
-      System.out.println(SeudoRandomMethod.totalPagarStatic); 
+      String resp1 = "A = " + SeudoRandomMethod.cantCargaA + ", B = " + SeudoRandomMethod.cantCargaB + ", C = " + SeudoRandomMethod.cantCargaC;
+      respuesta1.setText(resp1);
+      
+      String resp2 = String.valueOf(SeudoRandomMethod.horasExtrasTotalesStatic);
+      respuesta2.setText(resp2);
+      
+      String resp3 = String.valueOf(SeudoRandomMethod.totalPagarStatic);
+      respuesta3.setText(resp3);
     }
     
     /**
@@ -55,18 +64,32 @@ public class Salida2 extends javax.swing.JFrame {
 
         MainPanel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        JtablaSolucion1 = new javax.swing.JTable();
+        JtablaSolucion2 = new javax.swing.JTable();
+        MainButtonContinue = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        respuesta1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        respuesta2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        respuesta3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("The MonteCarlo Project");
+        setTitle("The MonteCarlo Project - Salida II");
         setResizable(false);
 
-        MainPanel.setBackground(new java.awt.Color(255, 255, 255));
+        MainPanel.setBackground(new java.awt.Color(146, 213, 220));
         MainPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         MainPanel.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
         MainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        JtablaSolucion1.setModel(new javax.swing.table.DefaultTableModel(
+        JtablaSolucion2 = new javax.swing.JTable(){
+            public boolean isCellEditable(int roeIndex,int colIndex){
+                return false;
+            }
+        };
+        JtablaSolucion2.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
+        JtablaSolucion2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -77,23 +100,70 @@ public class Salida2 extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(JtablaSolucion1);
+        JtablaSolucion2.setFocusable(false);
+        JtablaSolucion2.getTableHeader().setReorderingAllowed(false);
+        jScrollPane1.setViewportView(JtablaSolucion2);
 
-        MainPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, -1, 150));
+        MainPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 860, 250));
+
+        MainButtonContinue.setBackground(new java.awt.Color(196, 220, 245));
+        MainButtonContinue.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        MainButtonContinue.setText("Atrás");
+        MainButtonContinue.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MainButtonContinue.setName("btnatras1"); // NOI18N
+        MainButtonContinue.setPreferredSize(new java.awt.Dimension(79, 23));
+        MainButtonContinue.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MainButtonContinueActionPerformed(evt);
+            }
+        });
+        MainPanel.add(MainButtonContinue, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 400, 90, 30));
+
+        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        jLabel2.setText("Tabla de Resultados N° 2");
+        MainPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 50, -1, 20));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel1.setText("Cantidad de camiones por tipo de carga ");
+        MainPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, -1, -1));
+
+        respuesta1.setText("NO TOCAR");
+        MainPanel.add(respuesta1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 390, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel3.setText("Horas extras trabajadas ");
+        MainPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 370, -1, -1));
+
+        respuesta2.setText("NO TOCAR");
+        MainPanel.add(respuesta2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 390, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel4.setText("Costo generado por pago a cuadrillas");
+        MainPanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 370, -1, -1));
+
+        respuesta3.setText("NO TOCAR");
+        MainPanel.add(respuesta3, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 390, 60, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 606, Short.MAX_VALUE)
+            .addComponent(MainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 931, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 469, Short.MAX_VALUE)
+            .addComponent(MainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 484, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void MainButtonContinueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MainButtonContinueActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new Salida1().setVisible(true);
+        //new InputTables().setVisible(true);
+    }//GEN-LAST:event_MainButtonContinueActionPerformed
 
     /**
      * @param args the command line arguments
@@ -139,8 +209,16 @@ public class Salida2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable JtablaSolucion1;
+    private javax.swing.JTable JtablaSolucion2;
+    private javax.swing.JButton MainButtonContinue;
     private javax.swing.JPanel MainPanel;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel respuesta1;
+    private javax.swing.JLabel respuesta2;
+    private javax.swing.JLabel respuesta3;
     // End of variables declaration//GEN-END:variables
 }
