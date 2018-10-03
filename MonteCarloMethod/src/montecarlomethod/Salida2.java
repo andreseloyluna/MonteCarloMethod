@@ -63,13 +63,10 @@ public class Salida2 extends javax.swing.JFrame {
 
         MainPanel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-<<<<<<< HEAD
         JtablaSolucion2 = new javax.swing.JTable();
-=======
         JtablaSolucion1 = new javax.swing.JTable();
         MainButtonContinue = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
->>>>>>> master
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("The MonteCarlo Project - Salida II");
@@ -93,9 +90,7 @@ public class Salida2 extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(JtablaSolucion2);
 
-<<<<<<< HEAD
         MainPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 730, 250));
-=======
         MainPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, 510, 150));
 
         MainButtonContinue.setBackground(new java.awt.Color(196, 220, 245));
@@ -114,17 +109,17 @@ public class Salida2 extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel2.setText("Tabla de Resultados N° 2");
         MainPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 70, -1, 20));
->>>>>>> master
+
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-<<<<<<< HEAD
+
             .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 786, Short.MAX_VALUE)
-=======
+
             .addComponent(MainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 667, javax.swing.GroupLayout.PREFERRED_SIZE)
->>>>>>> master
+
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -185,12 +180,11 @@ public class Salida2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-<<<<<<< HEAD
+
     private javax.swing.JTable JtablaSolucion2;
-=======
+
     private javax.swing.JTable JtablaSolucion1;
     private javax.swing.JButton MainButtonContinue;
->>>>>>> master
     private javax.swing.JPanel MainPanel;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
