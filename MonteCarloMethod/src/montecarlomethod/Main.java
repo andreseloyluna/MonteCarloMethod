@@ -40,6 +40,7 @@ public class Main extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("The MonteCarlo Project");
@@ -53,7 +54,7 @@ public class Main extends javax.swing.JFrame {
 
         MainButtonContinue.setBackground(new java.awt.Color(196, 220, 245));
         MainButtonContinue.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
-        MainButtonContinue.setText("Continuar");
+        MainButtonContinue.setText("Iniciar");
         MainButtonContinue.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MainButtonContinue.setPreferredSize(new java.awt.Dimension(79, 23));
         MainButtonContinue.addActionListener(new java.awt.event.ActionListener() {
@@ -61,7 +62,7 @@ public class Main extends javax.swing.JFrame {
                 MainButtonContinueActionPerformed(evt);
             }
         });
-        MainPanel.add(MainButtonContinue, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 420, 90, 30));
+        MainPanel.add(MainButtonContinue, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 360, 90, 30));
 
         jLabel1.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
         jLabel1.setText("SIMULACIÓN Y MODELOS");
@@ -99,15 +100,19 @@ public class Main extends javax.swing.JFrame {
         jLabel9.setText("Terminal de descargas");
         MainPanel.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 300, -1, 20));
 
+        jLabel10.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
+        jLabel10.setText("2018 © Todos los derechos reservados - Luna,Rodríguez,Natera");
+        MainPanel.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 440, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 667, Short.MAX_VALUE)
+            .addComponent(MainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 667, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 469, Short.MAX_VALUE)
+            .addComponent(MainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -160,6 +165,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton MainButtonContinue;
     private javax.swing.JPanel MainPanel;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
