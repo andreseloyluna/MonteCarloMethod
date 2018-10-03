@@ -133,7 +133,7 @@ public class Salida2 extends javax.swing.JFrame {
         jLabel1.setText("Cantidad de camiones por tipo de carga ");
         MainPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 410, -1, -1));
 
-        respuesta1.setFont(new java.awt.Font("Trebuchet MS", 1, 13)); // NOI18N
+        respuesta1.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         respuesta1.setText("NO TOCAR");
         MainPanel.add(respuesta1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 430, -1, -1));
 
@@ -141,7 +141,7 @@ public class Salida2 extends javax.swing.JFrame {
         jLabel3.setText("Horas extras trabajadas ");
         MainPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 410, -1, -1));
 
-        respuesta2.setFont(new java.awt.Font("Trebuchet MS", 1, 13)); // NOI18N
+        respuesta2.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         respuesta2.setText("NO TOCAR");
         MainPanel.add(respuesta2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 430, -1, -1));
 
@@ -149,7 +149,7 @@ public class Salida2 extends javax.swing.JFrame {
         jLabel4.setText("Costo generado por pago a cuadrillas");
         MainPanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 410, -1, -1));
 
-        respuesta3.setFont(new java.awt.Font("Trebuchet MS", 1, 13)); // NOI18N
+        respuesta3.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         respuesta3.setText("NO TOCAR");
         MainPanel.add(respuesta3, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 430, 90, 20));
 
@@ -165,16 +165,34 @@ public class Salida2 extends javax.swing.JFrame {
         jButton2.setBackground(new java.awt.Color(248, 245, 224));
         jButton2.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         jButton2.setText("Ver Histograma #3");
+        jButton2.setName("btnHisto3"); // NOI18N
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         MainPanel.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 490, -1, 30));
 
         jButton3.setBackground(new java.awt.Color(248, 245, 224));
         jButton3.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         jButton3.setText("Ver Histograma #1");
+        jButton3.setName("btnHisto1"); // NOI18N
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         MainPanel.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 490, -1, 30));
 
         jButton4.setBackground(new java.awt.Color(248, 245, 224));
         jButton4.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         jButton4.setText("Ver Histograma #2");
+        jButton4.setName("btnHisto2"); // NOI18N
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
         MainPanel.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 490, -1, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -199,6 +217,21 @@ public class Salida2 extends javax.swing.JFrame {
         new Salida1().setVisible(true);
         //new InputTables().setVisible(true);
     }//GEN-LAST:event_MainButtonContinueActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+      this.setVisible(false);
+      new Histograma().setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+      this.setVisible(false);
+      new Histograma2().setVisible(true);
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+      this.setVisible(false);
+      new Histograma3().setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
