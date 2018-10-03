@@ -559,7 +559,8 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
         horasExtrasTotalesStatic = horasExtrasTotales;
         cantidadDeCamionesStatic = cantidadDeCamiones;
         diasStatic = dias;
-        new Salida().setVisible(true);
+        this.setVisible(false);
+        new Salida1().setVisible(true);
     }//GEN-LAST:event_calcularMActionPerformed
 
     public static double[][] tablaSolucion1Static;

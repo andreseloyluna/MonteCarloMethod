@@ -5,31 +5,35 @@
  */
 package montecarlomethod;
 
-import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author aels21
  */
-public class Salida extends javax.swing.JFrame {
+public class Salida1 extends javax.swing.JFrame {
 
     /**
      * Creates new form Main
      */
-    public Salida() {
+    public Salida1() {
       initComponents();
       setLocationRelativeTo(null);
       
       String[] headerTablaSolucion1 = {"Dia","Rn","Nro de Camiones"};
-      DefaultTableModel modelTablaSolucion1 = new DefaultTableModel(headerTablaSolucion1, 0);
-      
-        for (int i = 0; i < SeudoRandomMethod.diasStatic; i++) {
-            modelTablaSolucion1.addRow(new Object[]{i+1,SeudoRandomMethod.tablaSolucion1Static[i][1],SeudoRandomMethod.tablaSolucion1Static[i][2]});
-        }
+      DefaultTableModel modelTablaSolucion1 = new DefaultTableModel(null, headerTablaSolucion1);
+        
+        
+      for (int i = 0; i < SeudoRandomMethod.diasStatic; i++) {
+          String[] fila = new String[3];
+          fila[0] = String.valueOf(i + 1) ;
+          fila[1] = String.valueOf(SeudoRandomMethod.tablaSolucion1Static[i][1]);
+          fila[2] = String.valueOf(SeudoRandomMethod.tablaSolucion1Static[i][2]);
+          modelTablaSolucion1.addRow(fila);
+      }
         
 
-      JtablaSolucion1 = new JTable(modelTablaSolucion1 );
+      JtablaSolucion1.setModel(modelTablaSolucion1);
       
       System.out.println("Cantidad carga A: ");
       System.out.println(SeudoRandomMethod.cantCargaA);
@@ -52,6 +56,7 @@ public class Salida extends javax.swing.JFrame {
         MainPanel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         JtablaSolucion1 = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("The MonteCarlo Project");
@@ -75,7 +80,15 @@ public class Salida extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(JtablaSolucion1);
 
-        MainPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 77, -1, 310));
+        MainPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, -1, 150));
+
+        jButton1.setText("Salida 2");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        MainPanel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 380, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -90,6 +103,12 @@ public class Salida extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+       this.setVisible(false);
+       new Salida2().setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -108,21 +127,23 @@ public class Salida extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Salida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Salida1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Salida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Salida1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Salida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Salida1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Salida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Salida1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Salida().setVisible(true);
+                new Salida1().setVisible(true);
             }
         });
         
@@ -131,6 +152,7 @@ public class Salida extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable JtablaSolucion1;
     private javax.swing.JPanel MainPanel;
+    private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
