@@ -58,10 +58,10 @@ public class Salida2 extends javax.swing.JFrame {
         JtablaSolucion1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("The MonteCarlo Project");
+        setTitle("The MonteCarlo Project - Salida II");
         setResizable(false);
 
-        MainPanel.setBackground(new java.awt.Color(255, 255, 255));
+        MainPanel.setBackground(new java.awt.Color(146, 213, 220));
         MainPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         MainPanel.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
         MainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -79,17 +79,17 @@ public class Salida2 extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(JtablaSolucion1);
 
-        MainPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, -1, 150));
+        MainPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 510, 150));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 606, Short.MAX_VALUE)
+            .addComponent(MainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 667, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 469, Short.MAX_VALUE)
+            .addComponent(MainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
