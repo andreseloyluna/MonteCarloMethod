@@ -549,6 +549,7 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
         new Salida1().setVisible(true);
         new Histograma().setVisible(true);
         new Histograma2().setVisible(true);
+        new Histograma3().setVisible(true);
     }//GEN-LAST:event_calcularMActionPerformed
 
     public static double[][] tablaSolucion1Static;

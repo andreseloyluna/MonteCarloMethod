@@ -5,6 +5,9 @@
  */
 package montecarlomethod;
 
+import static montecarlomethod.SeudoRandomMethod.cantCargaA;
+import static montecarlomethod.SeudoRandomMethod.cantCargaB;
+import static montecarlomethod.SeudoRandomMethod.cantCargaC;
 import static montecarlomethod.SeudoRandomMethod.isBetween;
 import static montecarlomethod.SeudoRandomMethod.random;
 
@@ -12,7 +15,7 @@ import static montecarlomethod.SeudoRandomMethod.random;
  *
  * @author aels21
  */
-public class Histograma2 extends javax.swing.JFrame {
+public class Histograma3 extends javax.swing.JFrame {
 
     /**
      * Creates new form Main
@@ -20,10 +23,35 @@ public class Histograma2 extends javax.swing.JFrame {
     int calcular_posicion(int seudo, int min){
         return min-(seudo*30/100);
     }
-    public Histograma2() {
+    public Histograma3() {
       initComponents();
       setLocationRelativeTo(null);
-       int k = 0;
+      for (int i = 0; i < SeudoRandomMethod.cantidadDeCamionesStatic; i++) {
+            int seudoRandomNumber = (int) (SeudoRandomMethod.tablaSolucion2Static[i][4]*1000);
+            if (isBetween(seudoRandomNumber,0,399)){ //Calculo de la cantidad de carga
+                 javax.swing.JLabel jLabel4 = new javax.swing.JLabel();
+                 jLabel4.setText("--------->");
+                 MainPanel.setLayout(null);
+                 jLabel4.setSize(100, 50);
+                 MainPanel.add(jLabel4);
+                 jLabel4.setLocation(151,calcular_posicion(seudoRandomNumber, 350));//Se incrementa el contador de camiones con tipo de carga A
+            }else if(isBetween(seudoRandomNumber,400,749)){
+                javax.swing.JLabel jLabel4 = new javax.swing.JLabel();
+                 jLabel4.setText("--------->");
+                 MainPanel.setLayout(null);
+                 jLabel4.setSize(100, 50);
+                 MainPanel.add(jLabel4);
+                 jLabel4.setLocation(251,calcular_posicion(seudoRandomNumber, 350));//Se incrementa el contador de camiones con tipo de carga B
+            }else if(isBetween(seudoRandomNumber,750,999)){
+                javax.swing.JLabel jLabel4 = new javax.swing.JLabel();
+                 jLabel4.setText("--------->");
+                 MainPanel.setLayout(null);
+                 jLabel4.setSize(100, 50);
+                 MainPanel.add(jLabel4);
+                 jLabel4.setLocation(351,calcular_posicion(seudoRandomNumber, 350));//Se incrementa el contador de camiones con tipo de carga C
+            }
+      /*
+      int k = 0;
         for (int i = 0; i < SeudoRandomMethod.diasStatic; i++) {
             //Para cada uno de los dias, reviso cuantos camiones llegan
             int cantCamionesDia = (int) SeudoRandomMethod.tablaSolucion1Static[i][SeudoRandomMethod.tablaSolucion1Static[i].length-1];
@@ -84,7 +112,9 @@ public class Histograma2 extends javax.swing.JFrame {
                    
                     k++;
                 }
-        }
+        */
+            }
+      
     }
     
     /**
@@ -119,7 +149,7 @@ public class Histograma2 extends javax.swing.JFrame {
         MainPanel.setPreferredSize(new java.awt.Dimension(400, 400));
         MainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/montecarlomethod/assets/Imagen1_1.png"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/montecarlomethod/assets/Imagen2.png"))); // NOI18N
         MainPanel.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 410, 410));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -153,14 +183,30 @@ public class Histograma2 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Histograma2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Histograma3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Histograma2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Histograma3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Histograma2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Histograma3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Histograma2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Histograma3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -181,7 +227,7 @@ public class Histograma2 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Histograma2().setVisible(true);
+                new Histograma3().setVisible(true);
             }
         });
         
