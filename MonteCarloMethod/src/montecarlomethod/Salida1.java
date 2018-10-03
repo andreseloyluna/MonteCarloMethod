@@ -86,14 +86,12 @@ public class Salida1 extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(JtablaSolucion1);
 
-        MainPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, -1, 230));
-
-        MainPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, 510, 150));
-
+        MainPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 500, 190));
 
         jButton1.setBackground(new java.awt.Color(196, 220, 245));
         jButton1.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
         jButton1.setText("Salida II");
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);

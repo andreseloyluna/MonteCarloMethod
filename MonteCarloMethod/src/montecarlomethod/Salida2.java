@@ -64,7 +64,6 @@ public class Salida2 extends javax.swing.JFrame {
         MainPanel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         JtablaSolucion2 = new javax.swing.JTable();
-        JtablaSolucion1 = new javax.swing.JTable();
         MainButtonContinue = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
@@ -77,6 +76,7 @@ public class Salida2 extends javax.swing.JFrame {
         MainPanel.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
         MainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        JtablaSolucion2.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         JtablaSolucion2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -90,11 +90,10 @@ public class Salida2 extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(JtablaSolucion2);
 
-        MainPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 730, 250));
-        MainPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, 510, 150));
+        MainPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 860, 250));
 
         MainButtonContinue.setBackground(new java.awt.Color(196, 220, 245));
-        MainButtonContinue.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
+        MainButtonContinue.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         MainButtonContinue.setText("Atrás");
         MainButtonContinue.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MainButtonContinue.setName("btnatras1"); // NOI18N
@@ -104,26 +103,21 @@ public class Salida2 extends javax.swing.JFrame {
                 MainButtonContinueActionPerformed(evt);
             }
         });
-        MainPanel.add(MainButtonContinue, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 390, 90, 30));
+        MainPanel.add(MainButtonContinue, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 400, 90, 30));
 
         jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel2.setText("Tabla de Resultados N° 2");
-        MainPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 70, -1, 20));
-
+        MainPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 50, -1, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-
-            .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 786, Short.MAX_VALUE)
-
-            .addComponent(MainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 667, javax.swing.GroupLayout.PREFERRED_SIZE)
-
+            .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 931, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 484, Short.MAX_VALUE)
         );
 
         pack();
@@ -180,10 +174,7 @@ public class Salida2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-
     private javax.swing.JTable JtablaSolucion2;
-
-    private javax.swing.JTable JtablaSolucion1;
     private javax.swing.JButton MainButtonContinue;
     private javax.swing.JPanel MainPanel;
     private javax.swing.JLabel jLabel2;

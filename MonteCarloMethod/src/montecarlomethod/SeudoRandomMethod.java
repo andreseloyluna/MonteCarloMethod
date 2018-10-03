@@ -76,6 +76,7 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
 
         PseudoRandomSelector.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         PseudoRandomSelector.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione uno", "1 - Cuadrado medio", "2 - Producto medio", "3 - Producto medio variado", "4 - Congruencial multiplicativo", "5 - Congruencial mixto" }));
+        PseudoRandomSelector.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         PseudoRandomSelector.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 PseudoRandomSelectorItemStateChanged(evt);
@@ -150,6 +151,7 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
         calcularM.setBackground(new java.awt.Color(196, 220, 245));
         calcularM.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         calcularM.setText("Calcular");
+        calcularM.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         calcularM.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 calcularMActionPerformed(evt);

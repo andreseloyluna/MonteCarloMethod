@@ -53,7 +53,7 @@ public class Main extends javax.swing.JFrame {
         MainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         MainButtonContinue.setBackground(new java.awt.Color(196, 220, 245));
-        MainButtonContinue.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
+        MainButtonContinue.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         MainButtonContinue.setText("Iniciar");
         MainButtonContinue.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MainButtonContinue.setPreferredSize(new java.awt.Dimension(79, 23));
