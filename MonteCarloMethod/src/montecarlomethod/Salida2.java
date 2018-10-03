@@ -73,6 +73,9 @@ public class Salida2 extends javax.swing.JFrame {
         respuesta2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         respuesta3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("The MonteCarlo Project - Salida II");
@@ -125,24 +128,33 @@ public class Salida2 extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel1.setText("Cantidad de camiones por tipo de carga ");
-        MainPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, -1, -1));
+        MainPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, -1, -1));
 
         respuesta1.setText("NO TOCAR");
-        MainPanel.add(respuesta1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 390, -1, -1));
+        MainPanel.add(respuesta1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 430, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel3.setText("Horas extras trabajadas ");
-        MainPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 370, -1, -1));
+        MainPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 410, -1, -1));
 
         respuesta2.setText("NO TOCAR");
-        MainPanel.add(respuesta2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 390, -1, -1));
+        MainPanel.add(respuesta2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 430, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel4.setText("Costo generado por pago a cuadrillas");
-        MainPanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 370, -1, -1));
+        MainPanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 410, -1, -1));
 
         respuesta3.setText("NO TOCAR");
-        MainPanel.add(respuesta3, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 390, 60, 20));
+        MainPanel.add(respuesta3, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 430, 60, 20));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/montecarlomethod/assets/truck (2).png"))); // NOI18N
+        MainPanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 370, -1, -1));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/montecarlomethod/assets/truck RELOJ.png"))); // NOI18N
+        MainPanel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 370, -1, -1));
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/montecarlomethod/assets/badge.png"))); // NOI18N
+        MainPanel.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 370, 40, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -152,7 +164,9 @@ public class Salida2 extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 484, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(MainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 506, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -216,6 +230,9 @@ public class Salida2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel respuesta1;
     private javax.swing.JLabel respuesta2;
