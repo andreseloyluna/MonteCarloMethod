@@ -65,7 +65,7 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("The MonteCarlo Project - Selección del método generador");
 
-        jPanel1.setBackground(new java.awt.Color(233, 242, 243));
+        jPanel1.setBackground(new java.awt.Color(146, 213, 220));
         jPanel1.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
