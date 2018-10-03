@@ -56,6 +56,8 @@ public class Salida2 extends javax.swing.JFrame {
         MainPanel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         JtablaSolucion1 = new javax.swing.JTable();
+        MainButtonContinue = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("The MonteCarlo Project - Salida II");
@@ -79,7 +81,24 @@ public class Salida2 extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(JtablaSolucion1);
 
-        MainPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 510, 150));
+        MainPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, 510, 150));
+
+        MainButtonContinue.setBackground(new java.awt.Color(196, 220, 245));
+        MainButtonContinue.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
+        MainButtonContinue.setText("Atrás");
+        MainButtonContinue.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MainButtonContinue.setName("btnatras1"); // NOI18N
+        MainButtonContinue.setPreferredSize(new java.awt.Dimension(79, 23));
+        MainButtonContinue.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MainButtonContinueActionPerformed(evt);
+            }
+        });
+        MainPanel.add(MainButtonContinue, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 390, 90, 30));
+
+        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        jLabel2.setText("Tabla de Resultados N° 2");
+        MainPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 70, -1, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -94,6 +113,13 @@ public class Salida2 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void MainButtonContinueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MainButtonContinueActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new Salida1().setVisible(true);
+        //new InputTables().setVisible(true);
+    }//GEN-LAST:event_MainButtonContinueActionPerformed
 
     /**
      * @param args the command line arguments
@@ -140,7 +166,9 @@ public class Salida2 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable JtablaSolucion1;
+    private javax.swing.JButton MainButtonContinue;
     private javax.swing.JPanel MainPanel;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
