@@ -403,7 +403,7 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
         }
         /*
         * Calculo de la segunda tabla de solucion (Segundo recorrido)
-        * [ Dia | Camion | Rn | Kilogramos | Rn | TipoCarga | DuracionDescarga ]
+        * [ Dia | Camion | Rn | Kilogramos | Rn | TipoCarga | DuracionDescarga | CostoDescarga ]
         * ( En este recorrido se realiza el segundo despliegue de Rn para el tipo carga )
         */
         for (int i = 0; i < cantidadDeCamiones; i++) {
@@ -439,8 +439,6 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
                     break;
             }
         }
-        System.out.println("Tabla de Solucion 2:");
-        System.out.println(Arrays.deepToString(tablaSolucion2));
         // Tabla de solucion 2 lista
         
         /*
@@ -494,8 +492,28 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
                 cuadrillaActual = cuadrillaA; //Se selecciona qué cuadrilla ocupará éste camion, analizando quién tiene menos tiempo
             }
         }
+        System.out.println("Cantidad de camiones de cada tipo de carga:");
+        System.out.println("Carga A: " + cantCargaA);
+        System.out.println("Carga B: " + cantCargaB);
+        System.out.println("Carga C: " + cantCargaC);
+                
+        
         System.out.println("Tabla de Solucion 2:");
         System.out.println(Arrays.deepToString(tablaSolucion2));
+        
+        System.out.println("Cantidad de horas extras:");
+        System.out.println("Cuadrilla A: " + cuadrillaA.horasExtraTotales);
+        System.out.println("Cuadrilla B: " + cuadrillaB.horasExtraTotales);
+        System.out.println("Cuadrilla C: " + cuadrillaC.horasExtraTotales);
+        double horasExtrasTotales = cuadrillaA.horasExtraTotales + cuadrillaB.horasExtraTotales + cuadrillaC.horasExtraTotales;
+        System.out.println("Total: " + horasExtrasTotales);
+        
+        System.out.println("Cantidad de pago generado a las cuadrillas:");
+        double totalPagar = 0;
+        for (int j = 0; j < cantidadDeCamiones; j++) {
+            totalPagar += tablaSolucion2[j][7];
+        }
+        System.out.println("Monto: " + totalPagar);
     }//GEN-LAST:event_calcularMActionPerformed
     
     public Cuadrilla menosTiempo(Cuadrilla a, Cuadrilla b, Cuadrilla c){
