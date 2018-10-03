@@ -57,15 +57,20 @@ public class Salida1 extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         JtablaSolucion1 = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        MainButtonContinue = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("The MonteCarlo Project");
+        setTitle("The MonteCarlo Project - Salida I");
         setResizable(false);
 
-        MainPanel.setBackground(new java.awt.Color(255, 255, 255));
+        MainPanel.setBackground(new java.awt.Color(146, 213, 220));
         MainPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         MainPanel.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
         MainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jScrollPane1.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
 
         JtablaSolucion1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -80,25 +85,51 @@ public class Salida1 extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(JtablaSolucion1);
 
+<<<<<<< HEAD
         MainPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, -1, 230));
+=======
+        MainPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, 510, 150));
+>>>>>>> master
 
-        jButton1.setText("Salida 2");
+        jButton1.setBackground(new java.awt.Color(196, 220, 245));
+        jButton1.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
+        jButton1.setText("Salida II");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        MainPanel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 380, -1, -1));
+        MainPanel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 380, 90, 30));
+
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        MainPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 350, 120, -1));
+
+        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        jLabel2.setText("Tabla de Resultados N° 1");
+        MainPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 70, -1, 20));
+
+        MainButtonContinue.setBackground(new java.awt.Color(196, 220, 245));
+        MainButtonContinue.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
+        MainButtonContinue.setText("Atrás");
+        MainButtonContinue.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MainButtonContinue.setName("btnatras1"); // NOI18N
+        MainButtonContinue.setPreferredSize(new java.awt.Dimension(79, 23));
+        MainButtonContinue.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MainButtonContinueActionPerformed(evt);
+            }
+        });
+        MainPanel.add(MainButtonContinue, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 380, 90, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 606, Short.MAX_VALUE)
+            .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 667, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 469, Short.MAX_VALUE)
+            .addComponent(MainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -109,6 +140,13 @@ public class Salida1 extends javax.swing.JFrame {
        this.setVisible(false);
        new Salida2().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void MainButtonContinueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MainButtonContinueActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new SeudoRandomMethod().setVisible(true);
+        //new InputTables().setVisible(true);
+    }//GEN-LAST:event_MainButtonContinueActionPerformed
 
     /**
      * @param args the command line arguments
@@ -151,8 +189,11 @@ public class Salida1 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable JtablaSolucion1;
+    private javax.swing.JButton MainButtonContinue;
     private javax.swing.JPanel MainPanel;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

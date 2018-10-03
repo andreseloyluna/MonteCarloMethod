@@ -104,7 +104,7 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
         semilla2.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
         jPanel1.add(semilla2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 180, 100, 25));
 
-        sem1.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
+        sem1.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         sem1.setText("Semilla 1");
         jPanel1.add(sem1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 180, -1, -1));
 
@@ -161,7 +161,7 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
         constante.setText("Constante");
         jPanel1.add(constante, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 180, 70, -1));
 
-        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         jLabel1.setText("Inserte la cantidad de días");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 90, -1, 20));
 
@@ -185,13 +185,13 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 627, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 667, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 414, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 

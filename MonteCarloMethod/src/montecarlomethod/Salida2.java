@@ -63,13 +63,19 @@ public class Salida2 extends javax.swing.JFrame {
 
         MainPanel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
+<<<<<<< HEAD
         JtablaSolucion2 = new javax.swing.JTable();
+=======
+        JtablaSolucion1 = new javax.swing.JTable();
+        MainButtonContinue = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+>>>>>>> master
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("The MonteCarlo Project");
+        setTitle("The MonteCarlo Project - Salida II");
         setResizable(false);
 
-        MainPanel.setBackground(new java.awt.Color(255, 255, 255));
+        MainPanel.setBackground(new java.awt.Color(146, 213, 220));
         MainPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         MainPanel.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
         MainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -87,21 +93,53 @@ public class Salida2 extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(JtablaSolucion2);
 
+<<<<<<< HEAD
         MainPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 730, 250));
+=======
+        MainPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, 510, 150));
+
+        MainButtonContinue.setBackground(new java.awt.Color(196, 220, 245));
+        MainButtonContinue.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
+        MainButtonContinue.setText("Atrás");
+        MainButtonContinue.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MainButtonContinue.setName("btnatras1"); // NOI18N
+        MainButtonContinue.setPreferredSize(new java.awt.Dimension(79, 23));
+        MainButtonContinue.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MainButtonContinueActionPerformed(evt);
+            }
+        });
+        MainPanel.add(MainButtonContinue, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 390, 90, 30));
+
+        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        jLabel2.setText("Tabla de Resultados N° 2");
+        MainPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 70, -1, 20));
+>>>>>>> master
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
             .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 786, Short.MAX_VALUE)
+=======
+            .addComponent(MainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 667, javax.swing.GroupLayout.PREFERRED_SIZE)
+>>>>>>> master
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 469, Short.MAX_VALUE)
+            .addComponent(MainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void MainButtonContinueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MainButtonContinueActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new Salida1().setVisible(true);
+        //new InputTables().setVisible(true);
+    }//GEN-LAST:event_MainButtonContinueActionPerformed
 
     /**
      * @param args the command line arguments
@@ -147,8 +185,14 @@ public class Salida2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD
     private javax.swing.JTable JtablaSolucion2;
+=======
+    private javax.swing.JTable JtablaSolucion1;
+    private javax.swing.JButton MainButtonContinue;
+>>>>>>> master
     private javax.swing.JPanel MainPanel;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
