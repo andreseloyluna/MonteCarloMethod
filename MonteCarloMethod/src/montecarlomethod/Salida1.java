@@ -91,6 +91,8 @@ public class Salida1 extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        JtablaSolucion1.setFocusable(false);
+        JtablaSolucion1.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(JtablaSolucion1);
 
         MainPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 500, 190));
