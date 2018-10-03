@@ -139,7 +139,7 @@ public class InputTables extends javax.swing.JFrame {
         jLabel4.setText("Tablas de Entrada de Datos");
 
         jButton1.setBackground(new java.awt.Color(196, 220, 245));
-        jButton1.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         jButton1.setText("Continuar");
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.setMaximumSize(new java.awt.Dimension(87, 23));
