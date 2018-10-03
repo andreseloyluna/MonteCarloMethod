@@ -79,8 +79,10 @@ public class InputTables extends javax.swing.JFrame {
             }
         });
         jTable1.setAutoscrolls(false);
+        jTable1.setFocusable(false);
         jTable1.setInheritsPopupMenu(true);
         jTable1.setSelectionBackground(new java.awt.Color(217, 235, 249));
+        jTable1.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(jTable1);
 
         jTable2 = new javax.swing.JTable(){
@@ -108,6 +110,8 @@ public class InputTables extends javax.swing.JFrame {
             }
         });
         jTable2.setAutoscrolls(false);
+        jTable2.setFocusable(false);
+        jTable2.getTableHeader().setReorderingAllowed(false);
         jScrollPane2.setViewportView(jTable2);
 
         jTable3 = new javax.swing.JTable(){
@@ -139,6 +143,8 @@ public class InputTables extends javax.swing.JFrame {
             }
         });
         jTable3.setAutoscrolls(false);
+        jTable3.setFocusable(false);
+        jTable3.getTableHeader().setReorderingAllowed(false);
         jScrollPane3.setViewportView(jTable3);
 
         jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
