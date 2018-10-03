@@ -76,6 +76,11 @@ public class Salida2 extends javax.swing.JFrame {
         MainPanel.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
         MainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        JtablaSolucion2 = new javax.swing.JTable(){
+            public boolean isCellEditable(int roeIndex,int colIndex){
+                return false;
+            }
+        };
         JtablaSolucion2.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         JtablaSolucion2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

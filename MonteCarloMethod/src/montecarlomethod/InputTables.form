@@ -180,6 +180,9 @@
                   <Color blue="f9" green="eb" red="d9" type="rgb"/>
                 </Property>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="jTable1 = new javax.swing.JTable(){&#xa;    public boolean isCellEditable(int roeIndex,int colIndex){&#xa;    return false;&#xa;    }&#xa;};"/>
+              </AuxValues>
             </Component>
           </SubComponents>
         </Container>
@@ -226,6 +229,9 @@
                 </Property>
                 <Property name="autoscrolls" type="boolean" value="false"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="jTable2 = new javax.swing.JTable(){&#xa;    public boolean isCellEditable(int roeIndex,int colIndex){&#xa;    return false;&#xa;    }&#xa;};"/>
+              </AuxValues>
             </Component>
           </SubComponents>
         </Container>
@@ -283,6 +289,9 @@
                 </Property>
                 <Property name="autoscrolls" type="boolean" value="false"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="jTable3 = new javax.swing.JTable(){&#xa;    public boolean isCellEditable(int roeIndex,int colIndex){&#xa;    return false;&#xa;    }&#xa;};"/>
+              </AuxValues>
             </Component>
           </SubComponents>
         </Container>

@@ -80,6 +80,9 @@
                   </Table>
                 </Property>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="JtablaSolucion2 = new javax.swing.JTable(){&#xa;    public boolean isCellEditable(int roeIndex,int colIndex){&#xa;    return false;&#xa;    }&#xa;};"/>
+              </AuxValues>
             </Component>
           </SubComponents>
         </Container>
