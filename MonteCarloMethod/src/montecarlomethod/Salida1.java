@@ -5,6 +5,8 @@
  */
 package montecarlomethod;
 
+import java.awt.Component;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -141,6 +143,13 @@ public class Salida1 extends javax.swing.JFrame {
 
     private void MainButtonContinueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MainButtonContinueActionPerformed
         // TODO add your handling code here:
+        int opc;
+        
+        Object[] options = {"Aceptar","Cancelar"};
+        Component frame = null;
+        
+        opc = JOptionPane.showOptionDialog(frame,"Esta seguro que desea regresar?","Aviso",JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE,null,options,options[0]);
+      
         this.setVisible(false);
         new SeudoRandomMethod().setVisible(true);
         //new InputTables().setVisible(true);
