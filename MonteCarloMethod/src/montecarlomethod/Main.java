@@ -39,9 +39,10 @@ public class Main extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("The MonteCarlo Project");
+        setBackground(new java.awt.Color(233, 242, 243));
         setResizable(false);
 
-        MainPanel.setBackground(new java.awt.Color(255, 255, 255));
+        MainPanel.setBackground(new java.awt.Color(233, 242, 243));
         MainPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         MainPanel.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
         MainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
