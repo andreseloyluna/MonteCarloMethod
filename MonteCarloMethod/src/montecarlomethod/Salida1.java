@@ -152,14 +152,14 @@ public class Salida1 extends javax.swing.JFrame {
         // TODO add your handling code here:
         int opc;
         
-        Object[] options = {"Aceptar","Cancelar"};
-        Component frame = null;
-        
-        opc = JOptionPane.showOptionDialog(frame,"Esta seguro que desea regresar?","Aviso",JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE,null,options,options[0]);
       
-        this.setVisible(false);
-        new SeudoRandomMethod().setVisible(true);
-        //new InputTables().setVisible(true);
+        opc = JOptionPane.showConfirmDialog(this,"Esta seguro que desea regresar?","AVISO!",JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+        if(opc == JOptionPane.YES_OPTION){
+            this.setVisible(false);
+            new SeudoRandomMethod().setVisible(true);
+        }
+        
+       
     }//GEN-LAST:event_MainButtonContinueActionPerformed
 
     /**
