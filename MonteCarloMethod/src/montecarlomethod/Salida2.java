@@ -76,6 +76,9 @@ public class Salida2 extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("The MonteCarlo Project - Salida II");
@@ -120,41 +123,59 @@ public class Salida2 extends javax.swing.JFrame {
                 MainButtonContinueActionPerformed(evt);
             }
         });
-        MainPanel.add(MainButtonContinue, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 400, 90, 30));
+        MainPanel.add(MainButtonContinue, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 490, 90, 30));
 
         jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel2.setText("Tabla de Resultados N° 2");
         MainPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 50, -1, 20));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 13)); // NOI18N
         jLabel1.setText("Cantidad de camiones por tipo de carga ");
-        MainPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, -1, -1));
+        MainPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 410, -1, -1));
 
+        respuesta1.setFont(new java.awt.Font("Trebuchet MS", 1, 13)); // NOI18N
         respuesta1.setText("NO TOCAR");
-        MainPanel.add(respuesta1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 430, -1, -1));
+        MainPanel.add(respuesta1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 430, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Trebuchet MS", 1, 13)); // NOI18N
         jLabel3.setText("Horas extras trabajadas ");
-        MainPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 410, -1, -1));
+        MainPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 410, -1, -1));
 
+        respuesta2.setFont(new java.awt.Font("Trebuchet MS", 1, 13)); // NOI18N
         respuesta2.setText("NO TOCAR");
-        MainPanel.add(respuesta2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 430, -1, -1));
+        MainPanel.add(respuesta2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 430, -1, -1));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Trebuchet MS", 1, 13)); // NOI18N
         jLabel4.setText("Costo generado por pago a cuadrillas");
-        MainPanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 410, -1, -1));
+        MainPanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 410, -1, -1));
 
+        respuesta3.setFont(new java.awt.Font("Trebuchet MS", 1, 13)); // NOI18N
         respuesta3.setText("NO TOCAR");
-        MainPanel.add(respuesta3, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 430, 60, 20));
+        MainPanel.add(respuesta3, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 430, 90, 20));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/montecarlomethod/assets/truck (2).png"))); // NOI18N
-        MainPanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 370, -1, -1));
+        MainPanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 370, -1, -1));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/montecarlomethod/assets/truck RELOJ.png"))); // NOI18N
-        MainPanel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 370, -1, -1));
+        MainPanel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 370, -1, -1));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/montecarlomethod/assets/badge.png"))); // NOI18N
-        MainPanel.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 370, 40, -1));
+        MainPanel.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 370, 40, -1));
+
+        jButton2.setBackground(new java.awt.Color(248, 245, 224));
+        jButton2.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        jButton2.setText("Ver Histograma #3");
+        MainPanel.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 490, -1, 30));
+
+        jButton3.setBackground(new java.awt.Color(248, 245, 224));
+        jButton3.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        jButton3.setText("Ver Histograma #1");
+        MainPanel.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 490, -1, 30));
+
+        jButton4.setBackground(new java.awt.Color(248, 245, 224));
+        jButton4.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        jButton4.setText("Ver Histograma #2");
+        MainPanel.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 490, -1, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -165,7 +186,7 @@ public class Salida2 extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(MainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 506, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(MainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 568, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -226,6 +247,9 @@ public class Salida2 extends javax.swing.JFrame {
     private javax.swing.JTable JtablaSolucion2;
     private javax.swing.JButton MainButtonContinue;
     private javax.swing.JPanel MainPanel;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
