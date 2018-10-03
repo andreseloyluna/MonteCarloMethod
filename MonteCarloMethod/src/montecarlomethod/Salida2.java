@@ -43,13 +43,14 @@ public class Salida2 extends javax.swing.JFrame {
 
       JtablaSolucion2.setModel(modelTablaSolucion2);
       
-      System.out.println("Cantidad carga A: ");
-      System.out.println(SeudoRandomMethod.cantCargaA);
-      System.out.println("Cantidad carga B: ");
-      System.out.println(SeudoRandomMethod.cantCargaB);
-      System.out.println("Cantidad carga C: ");
-      System.out.println(SeudoRandomMethod.cantCargaC);
-      System.out.println(SeudoRandomMethod.totalPagarStatic); 
+      String resp1 = "A = " + SeudoRandomMethod.cantCargaA + ", B = " + SeudoRandomMethod.cantCargaB + ", C = " + SeudoRandomMethod.cantCargaC;
+      respuesta1.setText(resp1);
+      
+      String resp2 = String.valueOf(SeudoRandomMethod.horasExtrasTotalesStatic);
+      respuesta2.setText(resp2);
+      
+      String resp3 = String.valueOf(SeudoRandomMethod.totalPagarStatic);
+      respuesta3.setText(resp3);
     }
     
     /**
@@ -66,6 +67,12 @@ public class Salida2 extends javax.swing.JFrame {
         JtablaSolucion2 = new javax.swing.JTable();
         MainButtonContinue = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        respuesta1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        respuesta2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        respuesta3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("The MonteCarlo Project - Salida II");
@@ -115,6 +122,27 @@ public class Salida2 extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel2.setText("Tabla de Resultados N° 2");
         MainPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 50, -1, 20));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel1.setText("Cantidad de camiones por tipo de carga ");
+        MainPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, -1, -1));
+
+        respuesta1.setText("NO TOCAR");
+        MainPanel.add(respuesta1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 390, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel3.setText("Horas extras trabajadas ");
+        MainPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 370, -1, -1));
+
+        respuesta2.setText("NO TOCAR");
+        MainPanel.add(respuesta2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 390, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel4.setText("Costo generado por pago a cuadrillas");
+        MainPanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 370, -1, -1));
+
+        respuesta3.setText("NO TOCAR");
+        MainPanel.add(respuesta3, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 390, 60, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -184,7 +212,13 @@ public class Salida2 extends javax.swing.JFrame {
     private javax.swing.JTable JtablaSolucion2;
     private javax.swing.JButton MainButtonContinue;
     private javax.swing.JPanel MainPanel;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel respuesta1;
+    private javax.swing.JLabel respuesta2;
+    private javax.swing.JLabel respuesta3;
     // End of variables declaration//GEN-END:variables
 }
