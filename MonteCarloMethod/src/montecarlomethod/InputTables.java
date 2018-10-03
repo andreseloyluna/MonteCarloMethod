@@ -43,9 +43,10 @@ public class InputTables extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("The MonteCarlo Project - Tablas de datos");
+        setBackground(new java.awt.Color(233, 242, 243));
         setResizable(false);
 
-        InputTablesPanel.setBackground(new java.awt.Color(255, 255, 255));
+        InputTablesPanel.setBackground(new java.awt.Color(146, 213, 220));
         InputTablesPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jTable1.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N

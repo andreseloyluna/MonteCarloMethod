@@ -64,15 +64,15 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
         MainButtonContinue = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("The MonteCarlo Project - Selección del Método generador");
+        setTitle("The MonteCarlo Project - Selección del método generador");
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(146, 213, 220));
         jPanel1.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel4.setText("Selección de método generador ");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 40, 280, 20));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, 280, 20));
 
         PseudoRandomSelector.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
         PseudoRandomSelector.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione uno", "1 - Cuadrado medio", "2 - Producto medio", "3 - Producto medio variado", "4 - Congruencial multiplicativo", "5 - Congruencial mixto" }));
@@ -95,14 +95,14 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
                 semilla1ActionPerformed(evt);
             }
         });
-        jPanel1.add(semilla1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 90, 25));
+        jPanel1.add(semilla1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 100, 25));
 
         sem2.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
         sem2.setText("Semilla 2");
         jPanel1.add(sem2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 180, 70, -1));
 
         semilla2.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
-        jPanel1.add(semilla2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 180, 90, 25));
+        jPanel1.add(semilla2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 180, 100, 25));
 
         sem1.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
         sem1.setText("Semilla 1");
@@ -119,7 +119,7 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
                 aActionPerformed(evt);
             }
         });
-        jPanel1.add(a, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, 90, 25));
+        jPanel1.add(a, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, 100, 25));
 
         m1.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
         m1.setText("m");
@@ -132,7 +132,7 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
                 mActionPerformed(evt);
             }
         });
-        jPanel1.add(m, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, 90, 25));
+        jPanel1.add(m, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, 100, 25));
 
         c1.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
         c1.setText("c");
@@ -145,7 +145,7 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
                 cActionPerformed(evt);
             }
         });
-        jPanel1.add(c, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 270, 90, 25));
+        jPanel1.add(c, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 270, 100, 25));
 
         calcularM.setBackground(new java.awt.Color(196, 220, 245));
         calcularM.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
@@ -166,7 +166,7 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 90, -1, 20));
 
         days.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
-        jPanel1.add(days, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 90, 90, 25));
+        jPanel1.add(days, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 90, 100, 25));
 
         MainButtonContinue.setBackground(new java.awt.Color(196, 220, 245));
         MainButtonContinue.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
