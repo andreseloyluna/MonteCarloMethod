@@ -18,6 +18,7 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
     /**
      * Creates new form SeudoRandomMethod
      */
+    
     public SeudoRandomMethod() {
         initComponents();
         semilla1.setVisible(false);
@@ -62,6 +63,7 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
         MainButtonContinue = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("The MonteCarlo Project - Selección del Método generador");
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
@@ -69,7 +71,7 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel4.setText("Selección de método generador ");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(157, 41, 280, 20));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 40, 280, 20));
 
         PseudoRandomSelector.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
         PseudoRandomSelector.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione uno", "1 - Cuadrado medio", "2 - Producto medio", "3 - Producto medio variado", "4 - Congruencial multiplicativo", "5 - Congruencial mixto" }));
@@ -83,10 +85,9 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
                 PseudoRandomSelectorActionPerformed(evt);
             }
         });
-        jPanel1.add(PseudoRandomSelector, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, -1, -1));
+        jPanel1.add(PseudoRandomSelector, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, -1, -1));
 
         semilla1.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
-        semilla1.setMargin(new java.awt.Insets(2, 2, 15, 2));
         semilla1.setName(""); // NOI18N
         semilla1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,10 +98,10 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
 
         sem2.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
         sem2.setText("Semilla 2");
-        jPanel1.add(sem2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 180, 70, -1));
+        jPanel1.add(sem2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 180, 70, -1));
 
         semilla2.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
-        jPanel1.add(semilla2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 180, 90, 25));
+        jPanel1.add(semilla2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 180, 90, 25));
 
         sem1.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
         sem1.setText("Semilla 1");
@@ -111,7 +112,6 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
         jPanel1.add(a1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 20, -1));
 
         a.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
-        a.setMargin(new java.awt.Insets(10, 5, 5, 20));
         a.setName(""); // NOI18N
         a.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -125,7 +125,6 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
         jPanel1.add(m1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 240, 20, -1));
 
         m.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
-        m.setMargin(new java.awt.Insets(10, 5, 5, 20));
         m.setName(""); // NOI18N
         m.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -139,7 +138,6 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
         jPanel1.add(c1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 270, 20, -1));
 
         c.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
-        c.setMargin(new java.awt.Insets(10, 5, 5, 20));
         c.setName(""); // NOI18N
         c.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -156,18 +154,18 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
                 calcularMActionPerformed(evt);
             }
         });
-        jPanel1.add(calcularM, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 330, 90, 30));
+        jPanel1.add(calcularM, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 330, 90, 30));
 
         constante.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
         constante.setText("Constante");
-        jPanel1.add(constante, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 180, 70, -1));
+        jPanel1.add(constante, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 180, 70, -1));
 
         jLabel1.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
         jLabel1.setText("Inserte la cantidad de días");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 80, -1, 20));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 90, -1, 20));
 
         days.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
-        jPanel1.add(days, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 80, 90, 25));
+        jPanel1.add(days, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 90, 90, 25));
 
         MainButtonContinue.setBackground(new java.awt.Color(196, 220, 245));
         MainButtonContinue.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
@@ -179,20 +177,20 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
                 MainButtonContinueActionPerformed(evt);
             }
         });
-        jPanel1.add(MainButtonContinue, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 330, 90, 30));
+        jPanel1.add(MainButtonContinue, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 330, 90, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 594, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 627, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 393, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 414, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
