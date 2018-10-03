@@ -49,7 +49,7 @@ public class InputTables extends javax.swing.JFrame {
         InputTablesPanel.setBackground(new java.awt.Color(146, 213, 220));
         InputTablesPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jTable1.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
+        jTable1.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"0", "0.050", "0.050 ", "000 - 049"},
@@ -78,7 +78,7 @@ public class InputTables extends javax.swing.JFrame {
         jTable1.setSelectionBackground(new java.awt.Color(217, 235, 249));
         jScrollPane1.setViewportView(jTable1);
 
-        jTable2.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
+        jTable2.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"A", "0.400", "4000", "0.400", "000 - 399"},
@@ -100,7 +100,7 @@ public class InputTables extends javax.swing.JFrame {
         jTable2.setAutoscrolls(false);
         jScrollPane2.setViewportView(jTable2);
 
-        jTable3.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
+        jTable3.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"5000", "0.080", "0.080", "000 - 079"},

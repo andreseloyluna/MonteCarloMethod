@@ -72,6 +72,7 @@ public class Salida1 extends javax.swing.JFrame {
 
         jScrollPane1.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
 
+        JtablaSolucion1.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         JtablaSolucion1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},

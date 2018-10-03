@@ -72,9 +72,9 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel4.setText("Selección de método generador ");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, 280, 20));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 40, 280, 20));
 
-        PseudoRandomSelector.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
+        PseudoRandomSelector.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         PseudoRandomSelector.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione uno", "1 - Cuadrado medio", "2 - Producto medio", "3 - Producto medio variado", "4 - Congruencial multiplicativo", "5 - Congruencial mixto" }));
         PseudoRandomSelector.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -88,88 +88,88 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
         });
         jPanel1.add(PseudoRandomSelector, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, -1, -1));
 
-        semilla1.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
+        semilla1.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         semilla1.setName(""); // NOI18N
         semilla1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 semilla1ActionPerformed(evt);
             }
         });
-        jPanel1.add(semilla1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 100, 25));
+        jPanel1.add(semilla1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 115, 30));
 
-        sem2.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
+        sem2.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         sem2.setText("Semilla 2");
         jPanel1.add(sem2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 180, 70, -1));
 
-        semilla2.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
-        jPanel1.add(semilla2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 180, 100, 25));
+        semilla2.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
+        jPanel1.add(semilla2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 180, 115, 30));
 
-        sem1.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        sem1.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         sem1.setText("Semilla 1");
         jPanel1.add(sem1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 180, -1, -1));
 
-        a1.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
+        a1.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         a1.setText("a");
-        jPanel1.add(a1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 20, -1));
+        jPanel1.add(a1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 220, 20, -1));
 
-        a.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
+        a.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         a.setName(""); // NOI18N
         a.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 aActionPerformed(evt);
             }
         });
-        jPanel1.add(a, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, 100, 25));
+        jPanel1.add(a, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 115, 30));
 
-        m1.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
+        m1.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         m1.setText("m");
-        jPanel1.add(m1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 240, 20, -1));
+        jPanel1.add(m1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 260, 20, -1));
 
-        m.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
+        m.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         m.setName(""); // NOI18N
         m.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mActionPerformed(evt);
             }
         });
-        jPanel1.add(m, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, 100, 25));
+        jPanel1.add(m, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, 115, 30));
 
-        c1.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
+        c1.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         c1.setText("c");
-        jPanel1.add(c1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 270, 20, -1));
+        jPanel1.add(c1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 300, 20, -1));
 
-        c.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
+        c.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         c.setName(""); // NOI18N
         c.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cActionPerformed(evt);
             }
         });
-        jPanel1.add(c, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 270, 100, 25));
+        jPanel1.add(c, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 300, 115, 30));
 
         calcularM.setBackground(new java.awt.Color(196, 220, 245));
-        calcularM.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
+        calcularM.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         calcularM.setText("Calcular");
         calcularM.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 calcularMActionPerformed(evt);
             }
         });
-        jPanel1.add(calcularM, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 330, 90, 30));
+        jPanel1.add(calcularM, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 360, 90, 30));
 
-        constante.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
+        constante.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         constante.setText("Constante");
         jPanel1.add(constante, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 180, 70, -1));
 
-        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jLabel1.setText("Inserte la cantidad de días");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 90, -1, 20));
 
-        days.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
-        jPanel1.add(days, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 90, 100, 25));
+        days.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
+        jPanel1.add(days, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 90, 115, 30));
 
         MainButtonContinue.setBackground(new java.awt.Color(196, 220, 245));
-        MainButtonContinue.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
+        MainButtonContinue.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         MainButtonContinue.setText("Atrás");
         MainButtonContinue.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MainButtonContinue.setPreferredSize(new java.awt.Dimension(79, 23));
@@ -178,7 +178,7 @@ public class SeudoRandomMethod extends javax.swing.JFrame {
                 MainButtonContinueActionPerformed(evt);
             }
         });
-        jPanel1.add(MainButtonContinue, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 330, 90, 30));
+        jPanel1.add(MainButtonContinue, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 360, 90, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
