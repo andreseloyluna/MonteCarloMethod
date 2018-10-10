@@ -100,6 +100,7 @@ public class Histograma2 extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         MainPanel = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
 
         jRadioButton1.setText("jRadioButton1");
@@ -110,6 +111,7 @@ public class Histograma2 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("The MonteCarlo Project");
+        setUndecorated(true);
         setResizable(false);
 
         MainPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -118,6 +120,14 @@ public class Histograma2 extends javax.swing.JFrame {
         MainPanel.setMinimumSize(new java.awt.Dimension(400, 400));
         MainPanel.setPreferredSize(new java.awt.Dimension(400, 400));
         MainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton1.setText("Cerrar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        MainPanel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, -1, -1));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/montecarlomethod/assets/Imagen1_1.png"))); // NOI18N
         MainPanel.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 410, 410));
@@ -135,6 +145,12 @@ public class Histograma2 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new Salida2().setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -189,6 +205,7 @@ public class Histograma2 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel MainPanel;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel8;
